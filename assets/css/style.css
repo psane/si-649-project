@@ -24,7 +24,7 @@ body {
 }
 
 .chart {
-    background-color: #e3e3e3;
+    background-color: #ffffff;
     margin-top: 20px;
     margin-left: 25px;
 }
@@ -85,4 +85,8 @@ div.tooltip {
 
 tspan {
     display: block;
+}
+
+.legendText {
+    font-size: 12px;
 }

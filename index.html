@@ -13,51 +13,54 @@
 
 <body>
     <div class="row">
-        <h1>some text</h1>
-        <p>Below, there are two graphs representing the democrat and republican populations in each U.S. state. The height of the dot indicated the percentage of that population that believe in xyz. The size of the dot is reflective of the number of electoral votes that state gets.</p>
+        <h1>Climate Change Beliefs</h1>
+        <p>The map below represents climate change beliefs of democrat and republican populations in each U.S. state. The height of the dot indicated the percentage of the population that believes in the selected variable. The size of the dot is reflective of the number of electoral votes of that state.</p>
         <button class="btn btn-primary dem" onclick=datadem()>Democrats</button>
-        <button class="btn btn-primary rep" onclikc=datarep()>Republicans</button>
+        <button class="btn btn-primary rep" onclick=datarep()>Republicans</button>
     </div>
     <div class="controls">
         <p class="textlabel">Select variable to view:</p>
-        <select id="select_list">
+        <select id="select_list" onchange="drawChart()">
+            <option>Happening</option>
+            <option>Human</option>
+            <option>Harm US</option>
             <option>Regulate</option>
             <option>SupportRPS</option>
             <option>Fund Renewable</option>
-            <option>Happening</option>
-            <option>Human</option>
             <option>Consensus</option>
             <option>Worried</option>
-            <option>Harm US</option>
         </select>
-        <button class="btn btn-dark" id="select_button" onclick="drawChart()">View Results</button>
+        <!-- <button class="btn btn-dark" id="select_button" onclick="drawChart()">View Results</button> -->
         <div class="tooltip"></div>
     </div>
-    <svg class="chart"></svg>
 
     <script>
     var margin = {top: 50 , right: 50, bottom: 100, left: 20}
-    var width = 0.95*window.innerWidth - margin.left - margin.right
-    var height = 400 - margin.top - margin.bottom
+    var width = window.innerWidth - margin.left - margin.right
+    var height = 500 - margin.top - margin.bottom
+    var chartWidth = 0.8*width
 
-    var x = d3.scaleBand().range([0, width]).padding(0.1)
+    var x = d3.scaleBand().range([0, chartWidth]).padding(0.1)
     var y = d3.scaleLinear().range([height, 0])
     var sizeScale = d3.scaleLinear().range([0, 20])
-    var colorScale = d3.scaleOrdinal().range(["red", "yellow" , "green" , "blue"]);
+    var colorScale = d3.scaleOrdinal(d3.schemeDark2)
 
-    var tshort = d3.transition().duration(3000)
-    var tlong = d3.transition().duration(3000)
+    var t = d3.transition().duration(3000)
 
     var tooltip=d3.select(".tooltip")
 
-    var chart = d3.select(".chart")
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom)
-                .append("g")
+    var svg = d3.select("body").append("svg")
+                    .attr("class","chart")
+                    .attr("width", width)
+                    .attr("height", height + margin.top + margin.bottom)
+
+    var chart = svg.append("g")
+                .attr("width", chartWidth)
+                .attr("height", height)
                 .attr("transform", "translate(" + margin.left + "," + margin.top +")");
 
     var title=chart.append("text")
-        .attr("x", (width/2))
+        .attr("x", (chartWidth/2))
         .attr("y", 0 - (margin.top / 2))
         .attr("text-anchor", "middle")
         .attr("class","chartTitle")
@@ -69,7 +72,157 @@
         window.data=data
         drawChart()
         drawAxes()
+        createLegend()
     });
+
+    function datarep() {
+        window.selected = d3.select("#select_list").property("value")
+        console.log(selected)
+
+        x.domain(data.map((d)=> d.GeoName))
+        y.domain([0,100])
+        sizeScale.domain([0,d3.max(data, (d)=>d.Electoral_Votes)])
+        colorScale.domain(["Manufacturing", "Health care and social assistance" , "Retail trade", "Accommodation and food services"])
+
+        var circle = chart.selectAll('circle.dot')
+                        .data(data);
+
+        //exit
+        circle.exit()
+            .transition(t)
+            .attr('cx',0)
+            .attr('cy',0)
+            .remove()
+
+        //update
+        circle.attr("r",0).transition(t)
+            .attr('cy', function(d) {
+                if (selected == 'Regulate') {
+                    return y(d.regulateRep);
+                }
+                else if (selected == 'SupportRPS') {
+                    return y(d.supportRPSRep);
+                }
+                else if (selected == 'Fund Renewable') {
+                    return y(d.fundrenewablesRep);
+                }
+                else if (selected == 'Happening') {
+                    return y(d.happeningRep)
+                }
+                else if (selected == 'Human') {
+                    return y(d.humanRep)
+                }
+                else if (selected == 'Consensus') {
+                    return y(d.consensusRep)
+                }
+                else if (selected == 'Worried') {
+                    return y(d.worriedRep)
+                }
+                else if (selected == 'Harm US') {
+                    return y(d.harmUSRep)
+                }
+            })
+            .attr('r', function(d) { return sizeScale(d.Electoral_Votes)})
+            .attr("fill", (d) => colorScale(d.Industry));
+
+        //enter
+        title.text(selected);
+        circle.enter().append("circle")
+            .attr("class","dot")
+            .attr("transform", "translate(40,0)")
+            .attr('cx', (d)=>  x(d.GeoName))
+            .attr('cy', function(d) {
+                if (selected == 'Regulate') {
+                    console.log("Drawing for Regulate")
+                    return y(d.regulateRep)
+                }
+                else if (selected == 'SupportRPS') {
+                    console.log("Drawing for SupportRPS")
+                    return y(d.supportRPSRep)
+                }
+                else if (selected == 'Fund Renewable') {
+                    console.log("Drawing for Fund Renewable")
+                    return y(d.fundrenewablesRep);
+                }
+                else if (selected == 'Happening') {
+                    console.log("Drawing for Happening")
+                    return y(d.happeningRep)
+                }
+                else if (selected == 'Human') {
+                    console.log("Drawing for Human")
+                    return y(d.humanRep)
+                }
+                else if (selected == 'Consensus') {
+                    console.log("Drawing for Consensus")
+                    return y(d.consensusRep)
+                }
+                else if (selected == 'Worried') {
+                    console.log("Drawing for Worried")
+                    return y(d.worriedRep)
+                }
+                else if (selected == 'Harm US') {
+                    console.log("Drawing for Harm US")
+                    return y(d.harmUSRep)
+                }
+            })
+            .attr('r',0)
+            .transition(t)
+            .attr('r', function(d) { return sizeScale(d.Electoral_Votes)})
+            .attr("fill", (d) => colorScale(d.Industry));
+
+        //enter & update
+        chart.selectAll("circle.dot")
+                    .on("mouseover", function(d) {
+                        tooltip.transition(t)
+                        .style("opacity", .9);
+                        if (selected == 'Regulate') {
+                            tooltip.text("Regulate: " + d.regulateRep)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        else if (selected == 'SupportRPS') {
+                            tooltip.text("SupportRPS: " + d.supportRPSRep)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        else if (selected == 'Fund Renewable') {
+                            tooltip.text("Fund Renewable: " + d.fundrenewablesRep)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        else if (selected == 'Happening') {
+                            tooltip.text("Happening: " + d.happeningRep)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        else if (selected == 'Human') {
+                            tooltip.text("Human: " + d.humanRep)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        else if (selected == 'Consensus') {
+                            tooltip.text("Consensus: " + d.consensusRep)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        else if (selected == 'Worried') {
+                            tooltip.text("Worried: " + d.worriedRep)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        else if (selected == 'Harm US') {
+                            tooltip.text("Harm US: " + d.harmUSRep)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                        }
+                        tooltip.append("tspan").attr("class","label").text("Electoral Votes: " + d.Electoral_Votes)
+                        tooltip.append("tspan").attr("class","label").text("State: " + d.GeoName)
+                        tooltip.append("tspan").attr("class","label").text("Industry: " + d.Industry)
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.transition(t).style("opacity", 0);
+                    })
+    }
 
     function drawChart() {
         window.selected = d3.select("#select_list").property("value")
@@ -85,13 +238,13 @@
 
         //exit
         circle.exit()
-            .transition(tshort)
+            .transition(t)
             .attr('cx',0)
             .attr('cy',0)
             .remove()
 
         //update
-        circle.attr("r",0).transition(tlong)
+        circle.attr("r",0).transition(t)
             .attr('cy', function(d) {
                 if (selected == 'Regulate') {
                     return y(d.regulateDem);
@@ -123,10 +276,9 @@
 
         //enter
         title.text(selected);
-
         circle.enter().append("circle")
             .attr("class","dot")
-            .attr("transform", function(d) { return "translate(40,0)"; })
+            .attr("transform", "translate(40,0)")
             .attr('cx', (d)=>  x(d.GeoName))
             .attr('cy', function(d) {
                 if (selected == 'Regulate') {
@@ -163,46 +315,61 @@
                 }
             })
             .attr('r',0)
-            .transition(tshort)
+            .transition(t)
             .attr('r', function(d) { return sizeScale(d.Electoral_Votes)})
             .attr("fill", (d) => colorScale(d.Industry));
 
         //enter & update
         chart.selectAll("circle.dot")
                     .on("mouseover", function(d) {
-                        tooltip.transition(tshort)
+                        tooltip.transition(t)
                         .style("opacity", .9);
-
                         if (selected == 'Regulate') {
                             tooltip.text("Regulate: " + d.regulateDem)
                             .style("left", (d3.event.pageX) + "px")
                             .style("top", (d3.event.pageY - 28) + "px");
                         }
                         else if (selected == 'SupportRPS') {
-                            tooltip.append("tspan").attr("class","label").text("SupportRPS: " + d.supportRPSDem)
+                            tooltip.text("SupportRPS: " + d.supportRPSDem)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
                         }
                         else if (selected == 'Fund Renewable') {
-                            tooltip.append("tspan").attr("class","label").text("Fund Renewable: " + d.fundrenewablesDem);
+                            tooltip.text("Fund Renewable: " + d.fundrenewablesDem)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
                         }
                         else if (selected == 'Happening') {
-                            tooltip.append("tspan").attr("class","label").text("Happening: " + d.happeningDem)
+                            tooltip.text("Happening: " + d.happeningDem)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
                         }
                         else if (selected == 'Human') {
-                            tooltip.append("tspan").attr("class","label").text("Human: " + d.humanDem)
+                            tooltip.text("Human: " + d.humanDem)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
                         }
                         else if (selected == 'Consensus') {
-                            tooltip.append("tspan").attr("class","label").text("Consensus: " + d.consensusDem)
+                            tooltip.text("Consensus: " + d.consensusDem)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
                         }
                         else if (selected == 'Worried') {
-                            tooltip.append("tspan").attr("class","label").text("Worried: " + d.worriedDem)
+                            tooltip.text("Worried: " + d.worriedDem)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
                         }
                         else if (selected == 'Harm US') {
-                            tooltip.append("tspan").attr("class","label").text("Harm US: " + d.harmUSDem)
+                            tooltip.text("Harm US: " + d.harmUSDem)
+                            .style("left", (d3.event.pageX) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
                         }
                         tooltip.append("tspan").attr("class","label").text("Electoral Votes: " + d.Electoral_Votes)
+                        tooltip.append("tspan").attr("class","label").text("State: " + d.GeoName)
+                        tooltip.append("tspan").attr("class","label").text("Industry: " + d.Industry)
                     })
                     .on("mouseout", function (d) {
-                        tooltip.transition(tshort).style("opacity", 0);
+                        tooltip.transition(t).style("opacity", 0);
                     })
     }
 
@@ -228,7 +395,47 @@
     }
 
     function createLegend() {
+        var legendRectSize = 20;
+        var legendSpacing = 4;
+        var legend = d3.select(".chart")
+                .append("g")
+                .attr("transform","translate(" + (chartWidth + margin.left + margin.right) + ",0)")
+                .selectAll("g")
+                .data(colorScale.domain())
 
+        legend.enter().append('rect')
+          .attr('width', legendRectSize)
+          .attr('height', legendRectSize)
+          .attr("transform",function(d,i) {
+                              return "translate(0," + 30*i + ")";
+                          })
+          .style('fill', colorScale)
+          .style('stroke', colorScale);
+
+        legend.enter().append('text')
+        .attr('x', legendRectSize + legendSpacing)
+        .attr('y', legendRectSize - legendSpacing)
+        .attr("class", "legendText")
+        // .style("font-size",14)
+          .attr("transform",function(d,i) {
+                              return "translate(0," + 30*i + ")";
+                          })              // NEW
+          .text(function(d) { return d; });
+
+        // legend.enter().append('rect')
+        // .attr('width', 20)
+        // .attr('height', 20)
+        // .style('fill', colorScale)
+        // .style('stroke', colorScale)
+        // legend.enter().append("text")
+        // .attr("transform",function(d,i) {
+        //                     return "translate(30," + 5*i + ")";
+        //                 })// + (chartWidth + margin.left +/ margin.right) + ",0)")
+        // .text("sometext")
+        // legend.append('text')
+        // .attr('x', legendRectSize + legendSpacing)
+        // .attr('y', legendRectSize - legendSpacing)
+        // .text(function(d) { return d; });
     }
 </script>
 
