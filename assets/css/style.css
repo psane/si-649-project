@@ -32,38 +32,35 @@ body {
 .dem {
     background-color: #00A6EF;
     color: white;
+    border-radius: 4px !important;
+    box-shadow: 1px 3px white;
     margin-right: 20px;
-}
-
-.dem:hover {
-    background-color: white;
-    color: #00A6EF;
     border-color: #00A6EF;
+
 }
 
 .rep {
     background-color: #E91D0E;
-    color: white
+    color: white;
+    border-radius: 4px !important;
+    border-color: #00A6EF;
 }
 
-.rep:hover {
-    background-color: white;
-    color: #E91D0E;
-    border-color: #E91D0E;
+.rep:focus, .dem:focus {
+    box-shadow: 2px 4px #999;
+}
+
+.clicked {
+    font-weight: 700;
+    box-shadow: 2px 4px #999;
 }
 
 .textlabel, .select_list, .select_button {
     display: inline;
 }
 
-.controls {
+#controls {
     margin-left: 35px;
-    /* margin-top: 20px; */
-}
-
-.btn-dark {
-    line-height: 1;
-    padding:3px 12px;
 }
 
 div.tooltip {
