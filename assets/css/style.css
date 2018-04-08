@@ -87,3 +87,14 @@ tspan {
 .legendText {
     font-size: 12px;
 }
+section {
+    height: 100vh;
+    width: 100%;
+    padding: 25px;
+}
+
+#s4 {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+}
