@@ -32,8 +32,9 @@
             <option value="consensus">Believe most scientists believe global warming is happening</option>
             <option value="worried">Worried about global warming</option>
         </select>
-        <div class="tooltip"></div>
     </div>
+    <div class="tooltip"></div>
+    <svg class=chart></svg>
 
     <script>
     var margin = {top: 50 , right: 50, bottom: 100, left: 20}
@@ -48,59 +49,56 @@
 
     var t = d3.transition().duration(3000)
 
-    var tooltip=d3.select(".tooltip")
+    var tooltip = d3.select(".tooltip")
 
-    var svg = d3.select("body").append("svg")
-                    .attr("class","chart")
-                    .attr("width", width)
-                    .attr("height", height + margin.top + margin.bottom)
-
-    var chart = svg.append("g")
+    var chart = d3.select(".chart")
+                .attr("width", width)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
                 .attr("width", chartWidth)
                 .attr("height", height)
                 .attr("transform", "translate(" + margin.left + "," + margin.top +")");
 
-    var title=chart.append("text")
-        .attr("x", (chartWidth/2))
-        .attr("y", 0 - (margin.top / 2))
-        .attr("text-anchor", "middle")
-        .attr("class","chartTitle")
-        .style("font-size", "24px")
-        .style("font-family","Raleway")
-        .style("font-weight", 700)
+    var title = chart.append("text")
+                .attr("x", (chartWidth/2))
+                .attr("y", 0 - (margin.top / 2))
+                .attr("text-anchor", "middle")
+                .attr("class","chartTitle")
+                .style("font-size", "24px")
+                .style("font-family","Raleway")
+                .style("font-weight", 700)
 
     d3.json("assets/json/climate_data_long.json", function(error,data) {
         console.log(data)
-        window.nested_data=d3.nest().key((d)=>d.Group).entries(data)
+        window.nested_data = d3.nest().key((d)=>d.Group).entries(data)
         console.log(nested_data)
-        window.viz_data=nested_data[0].values
+        window.viz_data = nested_data[0].values
         drawChart()
     });
-
 
     function showcontrols(element) {
         if (element.id == 'democrat') {
             element.nextElementSibling.classList.remove("clicked")
             element.classList.add("clicked");
-            window.viz_data=nested_data[0].values
+            window.viz_data = nested_data[0].values
         }
         else if(element.id=='republican') {
             element.previousElementSibling.classList.remove("clicked")
             element.classList.add("clicked");
             console.log("Republicans")
-            window.viz_data=nested_data[1].values
+            window.viz_data = nested_data[1].values
         }
         drawChart()
-}
+    }
 
     function drawChart() {
         window.selected = d3.select("#select_list").property("value")
-        name=document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
+        name = document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
         title.text(name);
 
-        x.domain(viz_data.map((d)=> d.GeoName))
+        x.domain(viz_data.map((d) => d.GeoName))
         y.domain([0,100])
-        sizeScale.domain([0,d3.max(viz_data, (d)=>d.Electoral_Votes)])
+        sizeScale.domain([0,d3.max(viz_data, (d) => d.Electoral_Votes)])
         colorScale.domain(["Manufacturing", "Health care and social assistance" , "Retail trade", "Accommodation and food services"])
 
         var circle = chart.selectAll('circle.dot')
@@ -141,7 +139,7 @@
                     return y(d.harmUS)
                 }
             })
-            .attr('r', function(d) { return sizeScale(d.Electoral_Votes)})
+            .attr('r', (d) => sizeScale(d.Electoral_Votes))
             .attr("fill", (d) => colorScale(d.Industry));
 
         //enter
@@ -177,7 +175,7 @@
             })
             .attr('r',0)
             .transition(t)
-            .attr('r', function(d) { return sizeScale(d.Electoral_Votes)})
+            .attr('r', (d) => sizeScale(d.Electoral_Votes))
             .attr("fill", (d) => colorScale(d.Industry));
 
         //enter & update
@@ -229,9 +227,7 @@
                         tooltip.append("tspan").attr("class","label").text("State: " + d.GeoName)
                         tooltip.append("tspan").attr("class","label").text("Industry: " + d.Industry)
                     })
-                    .on("mouseout", function (d) {
-                        tooltip.transition(t).style("opacity", 0);
-                    })
+                    .on("mouseout", (d) => tooltip.transition(t).style("opacity", 0))
 
         drawAxes()
         createLegend()
@@ -259,31 +255,26 @@
     }
 
     function createLegend() {
-        var legendRectSize = 20;
-        var legendSpacing = 4;
         var legend = d3.select(".chart")
                 .append("g")
                 .attr("transform","translate(" + (chartWidth + margin.left + margin.right) + ",0)")
                 .selectAll("g")
                 .data(colorScale.domain())
 
-        legend.enter().append('rect')
-            .attr('width', legendRectSize)
-            .attr('height', legendRectSize)
-            .attr("transform",function(d,i) {
-                    return "translate(0," + 30*i + ")";
-                })
+        legend.enter().append('circle')
+            .attr('cx', 10)
+            .attr('cy', 12)
+            .attr('r', 10)
+            .attr("transform", (d,i) => "translate(0," + 30*i + ")")
             .style('fill', colorScale)
             .style('stroke', colorScale);
 
         legend.enter().append('text')
-            .attr('x', legendRectSize + legendSpacing)
-            .attr('y', legendRectSize - legendSpacing)
+            .attr('x', 25)
+            .attr('y', 16)
             .attr("class", "legendText")
-            .attr("transform",function(d,i) {
-                    return "translate(0," + 30*i + ")";
-                })
-            .text(function(d) { return d; });
+            .attr("transform",(d,i) => "translate(0," + 30*i + ")")
+            .text((d) => d )
     }
 </script>
 
