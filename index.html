@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <div class="tooltip"></div>
     <section id="s-1">
         <div class="container">
             <div class="row">
@@ -24,24 +25,7 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
-    </div>
-    <div id="controls">
-        <p class="textlabel">Select variable to view:</p>
-        <select id="select_list" onchange="drawChart()">
-            <option value="happening">Believe global warming is happening</option>
-            <option value="human">Believe global warming is caused by human activity</option>
-            <option value="harmUS">Believe global warming will harm US</option>
-            <option value="regulate">Support regulating CO2 as a pollutant</option>
-            <option value="supportRPS">Support producing 20% electricity from renewable sources</option>
-            <option value="fundrenewables">Support funding research for renewable energy sources</option>
-            <option value="consensus">Believe most scientists believe global warming is happening</option>
-            <option value="worried">Worried about global warming</option>
-        </select>
-    </div>
-    <div class="tooltip"></div>
-    <svg class=chart></svg>
-=======
+        <svg class="chart1"></svg>
     </section>
     <section id="s-2">
         <div class="container">
@@ -55,6 +39,7 @@
                 </div>
             </div>
         </div>
+        <svg class="chart2"></svg>
     </section>
     <section id="s-3">
         <div class="container">
@@ -68,6 +53,7 @@
                 </div>
             </div>
         </div>
+        <svg class="chart3"></svg>
     </section>
     <section id="s-4">
         <div class="row">
@@ -92,9 +78,8 @@
             </select>
             <div class="tooltip"></div>
         </div>
+        <svg class="chart4"></svg>
     </section>
-    
->>>>>>> f6cca3c3e2ba107e095195ae22dfcd9dc77a882e
 
     <script>
     var margin = {top: 50 , right: 50, bottom: 100, left: 20}
@@ -111,22 +96,10 @@
 
     var tooltip = d3.select(".tooltip")
 
-<<<<<<< HEAD
-    var chart = d3.select(".chart")
+    var chart4 = d3.select(".chart4")
                 .attr("width", width)
                 .attr("height", height + margin.top + margin.bottom)
                 .append("g")
-=======
-    var svg = d3.select("#s-4").append("svg")
-                    .attr("class","chart")
-                    .attr("width", width)
-                    .attr("height", height + margin.top + margin.bottom)
-
-    var chart = svg.append("g")
->>>>>>> f6cca3c3e2ba107e095195ae22dfcd9dc77a882e
-                .attr("width", chartWidth)
-                .attr("height", height)
-                .attr("transform", "translate(" + margin.left + "," + margin.top +")");
 
     var title = chart.append("text")
                 .attr("x", (chartWidth/2))
