@@ -101,7 +101,7 @@
                 .attr("height", height + margin.top + margin.bottom)
                 .append("g")
 
-    var title = chart.append("text")
+    var title = chart4.append("text")
                 .attr("x", (chartWidth/2))
                 .attr("y", 0 - (margin.top / 2))
                 .attr("text-anchor", "middle")
@@ -143,7 +143,7 @@
         sizeScale.domain([0,d3.max(viz_data, (d) => d.Electoral_Votes)])
         colorScale.domain(["Manufacturing", "Health care and social assistance" , "Retail trade", "Accommodation and food services"])
 
-        var circle = chart.selectAll('circle.dot')
+        var circle = chart4.selectAll('circle.dot')
                         .data(viz_data);
 
         //exit
@@ -221,7 +221,7 @@
             .attr("fill", (d) => colorScale(d.Industry));
 
         //enter & update
-        chart.selectAll("circle.dot")
+        chart4.selectAll("circle.dot")
                     .on("mouseover", function(d) {
                         tooltip.transition(t)
                         .style("opacity", .9);
@@ -277,7 +277,7 @@
 
     function drawAxes() {
         // x-axis
-        chart.append("g")
+        chart4.append("g")
             .attr("transform", "translate(30," + height + ")")
             .style("font-family","Raleway")
             .style("font-size", "11px")
@@ -289,15 +289,15 @@
             .attr("transform", "rotate(-65)");
 
         // y-axis
-        chart.append("g")
-            .attr("transform", "translate(30,0)")
+        chart4.append("g")
+            .attr("transform", "translate(30,10)")
             .style("font-family","Raleway")
             .style("font-size", "11px")
             .call(d3.axisLeft(y))
     }
 
     function createLegend() {
-        var legend = d3.select(".chart")
+        var legend = d3.select(".chart4")
                 .append("g")
                 .attr("transform","translate(" + (chartWidth + margin.left + margin.right) + ",0)")
                 .selectAll("g")
