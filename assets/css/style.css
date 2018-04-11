@@ -87,14 +87,108 @@ tspan {
 .legendText {
     font-size: 12px;
 }
+
 section {
     height: 100vh;
     width: 100%;
     padding: 25px;
+    position: relative;
 }
 
 #s4 {
     height: auto;
     width: 100%;
     padding: 0px;
+}
+
+#democrat-btn-2 {
+    background-color: #fff;
+    border-radius: 3px;
+    border: solid 2px #00A6EF;
+    margin-left: 15px;
+}
+
+#democrat-btn-2:hover {
+    background-color: #00A6EF;
+    color: #fff;
+}
+
+#democrat-btn-2.active {
+    background-color: #00A6EF;
+    color: #fff;
+    outline: 0 !important;
+}
+
+
+#republican-btn-2 {
+    background-color: #fff;
+    border-radius: 3px;
+    border: solid 2px #E91D0E;
+    margin-left: 15px;
+}
+
+#republican-btn-2:hover {
+    background-color: #E91D0E;
+    color: #fff;
+    
+}
+
+#republican-btn-2.active {
+    background-color: #E91D0E;
+    color: #fff;
+    outline: 0 !important;
+}
+.btn-next {
+    
+    border-radius: 3px;
+    border: solid 2px #4d4d4d;
+    margin: 0 auto;
+    height: 40px;
+    width: 100px;
+    color: #4d4d4d;
+    padding-top: 6px;
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    -moz-transition: all ease-in-out 0.26s;
+    -o-transition: all ease-in-out 0.26s;
+    -webkit-transition: all ease-in-out 0.26s;
+    transition: all ease-in-out 0.26s;
+}
+.btn-next.white {
+    border: solid 2px #fff;
+    color: #fff;
+}
+.btn-next:hover {
+    background-color: #4d4d4d;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 13px 15px rgba(0,0,0,0.1), 0 3px 5px rgba(0,0,0,0.05);
+}
+
+.btn-next.white:hover {
+    background-color: #fff;
+    color: #4d4d4d;
+    text-decoration: none;
+    box-shadow: 0 13px 15px rgba(0,0,0,0.1), 0 3px 5px rgba(0,0,0,0.05);
+}
+
+.full-color-bg {
+    background-color: #64B5F6;
+}
+
+.lg-headline {
+    color: #fff;
+    font-size: 80px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    padding-top: 100px;
+}
+
+.lg-subtext {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 200;
 }
