@@ -1,6 +1,7 @@
 [
  {
    "GeoName": "Alabama",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 78.294,
    "supportRPS": 62.118,
@@ -16,6 +17,7 @@
  },
  {
    "GeoName": "Alaska",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 89.054,
    "supportRPS": 79.163,
@@ -31,6 +33,7 @@
  },
  {
    "GeoName": "Arizona",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 85.901,
    "supportRPS": 83.176,
@@ -46,6 +49,7 @@
  },
  {
    "GeoName": "Arkansas",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 81.774,
    "supportRPS": 77.778,
@@ -61,6 +65,7 @@
  },
  {
    "GeoName": "California",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 86.741,
    "supportRPS": 82.487,
@@ -76,6 +81,7 @@
  },
  {
    "GeoName": "Colorado",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 86.984,
    "supportRPS": 83.252,
@@ -91,6 +97,7 @@
  },
  {
    "GeoName": "Connecticut",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 85.685,
    "supportRPS": 83.379,
@@ -106,6 +113,7 @@
  },
  {
    "GeoName": "Delaware",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 81.124,
    "supportRPS": 76.024,
@@ -121,6 +129,7 @@
  },
  {
    "GeoName": "Florida",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 79.723,
    "supportRPS": 77.117,
@@ -136,6 +145,7 @@
  },
  {
    "GeoName": "Georgia",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 77.602,
    "supportRPS": 71.203,
@@ -151,6 +161,7 @@
  },
  {
    "GeoName": "Hawaii",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 89.909,
    "supportRPS": 83.007,
@@ -166,6 +177,7 @@
  },
  {
    "GeoName": "Idaho",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.665,
    "supportRPS": 89.591,
@@ -181,6 +193,7 @@
  },
  {
    "GeoName": "Illinois",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 86.97,
    "supportRPS": 77.758,
@@ -196,6 +209,7 @@
  },
  {
    "GeoName": "Indiana",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 82.94,
    "supportRPS": 73.204,
@@ -211,6 +225,7 @@
  },
  {
    "GeoName": "Iowa",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.474,
    "supportRPS": 77.625,
@@ -226,6 +241,7 @@
  },
  {
    "GeoName": "Kansas",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 85.536,
    "supportRPS": 83.987,
@@ -241,6 +257,7 @@
  },
  {
    "GeoName": "Kentucky",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 82.304,
    "supportRPS": 68.13,
@@ -256,6 +273,7 @@
  },
  {
    "GeoName": "Louisiana",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 80.715,
    "supportRPS": 73.527,
@@ -271,6 +289,7 @@
  },
  {
    "GeoName": "Maine",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 85.064,
    "supportRPS": 79.368,
@@ -286,6 +305,7 @@
  },
  {
    "GeoName": "Maryland",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 82.493,
    "supportRPS": 77.082,
@@ -301,6 +321,7 @@
  },
  {
    "GeoName": "Massachusetts",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 84.884,
    "supportRPS": 81.642,
@@ -316,6 +337,7 @@
  },
  {
    "GeoName": "Michigan",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 85.093,
    "supportRPS": 77.232,
@@ -331,6 +353,7 @@
  },
  {
    "GeoName": "Minnesota",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.567,
    "supportRPS": 81.464,
@@ -346,6 +369,7 @@
  },
  {
    "GeoName": "Mississippi",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 80.84,
    "supportRPS": 64.817,
@@ -361,6 +385,7 @@
  },
  {
    "GeoName": "Missouri",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 83.604,
    "supportRPS": 80.835,
@@ -376,6 +401,7 @@
  },
  {
    "GeoName": "Montana",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.84,
    "supportRPS": 82.936,
@@ -391,6 +417,7 @@
  },
  {
    "GeoName": "Nebraska",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 85.767,
    "supportRPS": 81.171,
@@ -406,6 +433,7 @@
  },
  {
    "GeoName": "Nevada",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.353,
    "supportRPS": 82.438,
@@ -421,6 +449,7 @@
  },
  {
    "GeoName": "New Hampshire",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 86.883,
    "supportRPS": 82.45,
@@ -436,6 +465,7 @@
  },
  {
    "GeoName": "New Jersey",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 85.812,
    "supportRPS": 81.656,
@@ -451,6 +481,7 @@
  },
  {
    "GeoName": "New Mexico",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 86.565,
    "supportRPS": 74.96,
@@ -466,6 +497,7 @@
  },
  {
    "GeoName": "New York",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 83.944,
    "supportRPS": 80.903,
@@ -481,6 +513,7 @@
  },
  {
    "GeoName": "North Carolina",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 81.739,
    "supportRPS": 76.832,
@@ -496,6 +529,7 @@
  },
  {
    "GeoName": "North Dakota",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.044,
    "supportRPS": 77.157,
@@ -511,6 +545,7 @@
  },
  {
    "GeoName": "Ohio",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 82.666,
    "supportRPS": 77.925,
@@ -526,6 +561,7 @@
  },
  {
    "GeoName": "Oklahoma",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 82.411,
    "supportRPS": 76.059,
@@ -541,6 +577,7 @@
  },
  {
    "GeoName": "Oregon",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.994,
    "supportRPS": 84.314,
@@ -556,6 +593,7 @@
  },
  {
    "GeoName": "Pennsylvania",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 84.833,
    "supportRPS": 77.308,
@@ -571,6 +609,7 @@
  },
  {
    "GeoName": "Rhode Island",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 83.862,
    "supportRPS": 80.049,
@@ -586,6 +625,7 @@
  },
  {
    "GeoName": "South Carolina",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 78.391,
    "supportRPS": 72.574,
@@ -601,6 +641,7 @@
  },
  {
    "GeoName": "South Dakota",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.331,
    "supportRPS": 84.843,
@@ -616,6 +657,7 @@
  },
  {
    "GeoName": "Tennessee",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 80.38,
    "supportRPS": 70.15,
@@ -631,6 +673,7 @@
  },
  {
    "GeoName": "Texas",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 81.744,
    "supportRPS": 72.633,
@@ -646,6 +689,7 @@
  },
  {
    "GeoName": "Utah",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 86.268,
    "supportRPS": 83.246,
@@ -661,6 +705,7 @@
  },
  {
    "GeoName": "Vermont",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 88.307,
    "supportRPS": 79.962,
@@ -676,6 +721,7 @@
  },
  {
    "GeoName": "Virginia",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 84.154,
    "supportRPS": 78.657,
@@ -691,6 +737,7 @@
  },
  {
    "GeoName": "Washington",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.812,
    "supportRPS": 82.802,
@@ -706,6 +753,7 @@
  },
  {
    "GeoName": "West Virginia",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 85.165,
    "supportRPS": 61.467,
@@ -721,6 +769,7 @@
  },
  {
    "GeoName": "Wisconsin",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.553,
    "supportRPS": 77.97,
@@ -736,6 +785,7 @@
  },
  {
    "GeoName": "Wyoming",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 90.917,
    "supportRPS": 68.665,
@@ -751,6 +801,7 @@
  },
  {
    "GeoName": "Alabama",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 56.763,
    "supportRPS": 45.44,
@@ -766,6 +817,7 @@
  },
  {
    "GeoName": "Alaska",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 61.148,
    "supportRPS": 43.569,
@@ -781,6 +833,7 @@
  },
  {
    "GeoName": "Arizona",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 54.901,
    "supportRPS": 46.172,
@@ -796,6 +849,7 @@
  },
  {
    "GeoName": "Arkansas",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 55.849,
    "supportRPS": 44.235,
@@ -811,6 +865,7 @@
  },
  {
    "GeoName": "California",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 60.054,
    "supportRPS": 53.227,
@@ -826,6 +881,7 @@
  },
  {
    "GeoName": "Colorado",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 54.203,
    "supportRPS": 46.737,
@@ -841,6 +897,7 @@
  },
  {
    "GeoName": "Connecticut",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 57.892,
    "supportRPS": 57.239,
@@ -856,6 +913,7 @@
  },
  {
    "GeoName": "Delaware",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.805,
    "supportRPS": 51.799,
@@ -871,6 +929,7 @@
  },
  {
    "GeoName": "Florida",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 61.733,
    "supportRPS": 51.854,
@@ -886,6 +945,7 @@
  },
  {
    "GeoName": "Georgia",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 59.134,
    "supportRPS": 47.895,
@@ -901,6 +961,7 @@
  },
  {
    "GeoName": "Hawaii",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 59.289,
    "supportRPS": 56.639,
@@ -916,6 +977,7 @@
  },
  {
    "GeoName": "Idaho",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 55.086,
    "supportRPS": 48.579,
@@ -931,6 +993,7 @@
  },
  {
    "GeoName": "Illinois",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 61.252,
    "supportRPS": 56.553,
@@ -946,6 +1009,7 @@
  },
  {
    "GeoName": "Indiana",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 54.099,
    "supportRPS": 44.064,
@@ -961,6 +1025,7 @@
  },
  {
    "GeoName": "Iowa",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 51.2,
    "supportRPS": 44.545,
@@ -976,6 +1041,7 @@
  },
  {
    "GeoName": "Kansas",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 54.427,
    "supportRPS": 48.811,
@@ -991,6 +1057,7 @@
  },
  {
    "GeoName": "Kentucky",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.19,
    "supportRPS": 48.331,
@@ -1006,6 +1073,7 @@
  },
  {
    "GeoName": "Louisiana",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 55.276,
    "supportRPS": 43.189,
@@ -1021,6 +1089,7 @@
  },
  {
    "GeoName": "Maine",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 58.235,
    "supportRPS": 54.548,
@@ -1036,6 +1105,7 @@
  },
  {
    "GeoName": "Maryland",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 62.251,
    "supportRPS": 52.499,
@@ -1051,6 +1121,7 @@
  },
  {
    "GeoName": "Massachusetts",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 61.871,
    "supportRPS": 57.111,
@@ -1066,6 +1137,7 @@
  },
  {
    "GeoName": "Michigan",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 56.308,
    "supportRPS": 50.378,
@@ -1081,6 +1153,7 @@
  },
  {
    "GeoName": "Minnesota",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 55.241,
    "supportRPS": 47.292,
@@ -1096,6 +1169,7 @@
  },
  {
    "GeoName": "Mississippi",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.408,
    "supportRPS": 47.836,
@@ -1111,6 +1185,7 @@
  },
  {
    "GeoName": "Missouri",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 54.691,
    "supportRPS": 47.547,
@@ -1126,6 +1201,7 @@
  },
  {
    "GeoName": "Montana",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 54.128,
    "supportRPS": 47.256,
@@ -1141,6 +1217,7 @@
  },
  {
    "GeoName": "Nebraska",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 53.99,
    "supportRPS": 46.02,
@@ -1156,6 +1233,7 @@
  },
  {
    "GeoName": "Nevada",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 51.899,
    "supportRPS": 45.842,
@@ -1171,6 +1249,7 @@
  },
  {
    "GeoName": "New Hampshire",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 56.007,
    "supportRPS": 54.289,
@@ -1186,6 +1265,7 @@
  },
  {
    "GeoName": "New Jersey",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 66.56,
    "supportRPS": 56.169,
@@ -1201,6 +1281,7 @@
  },
  {
    "GeoName": "New Mexico",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 51.046,
    "supportRPS": 41.878,
@@ -1216,6 +1297,7 @@
  },
  {
    "GeoName": "New York",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 72.833,
    "supportRPS": 57.979,
@@ -1231,6 +1313,7 @@
  },
  {
    "GeoName": "North Carolina",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.774,
    "supportRPS": 49.88,
@@ -1246,6 +1329,7 @@
  },
  {
    "GeoName": "North Dakota",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 53.04,
    "supportRPS": 44.264,
@@ -1261,6 +1345,7 @@
  },
  {
    "GeoName": "Ohio",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 53.305,
    "supportRPS": 47.342,
@@ -1276,6 +1361,7 @@
  },
  {
    "GeoName": "Oklahoma",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 56.261,
    "supportRPS": 41.735,
@@ -1291,6 +1377,7 @@
  },
  {
    "GeoName": "Oregon",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 60.36,
    "supportRPS": 52.133,
@@ -1306,6 +1393,7 @@
  },
  {
    "GeoName": "Pennsylvania",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 63.227,
    "supportRPS": 51.999,
@@ -1321,6 +1409,7 @@
  },
  {
    "GeoName": "Rhode Island",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 56.393,
    "supportRPS": 56.8,
@@ -1336,6 +1425,7 @@
  },
  {
    "GeoName": "South Carolina",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.448,
    "supportRPS": 49.861,
@@ -1351,6 +1441,7 @@
  },
  {
    "GeoName": "South Dakota",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 55.343,
    "supportRPS": 48.227,
@@ -1366,6 +1457,7 @@
  },
  {
    "GeoName": "Tennessee",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 57.757,
    "supportRPS": 42.929,
@@ -1381,6 +1473,7 @@
  },
  {
    "GeoName": "Texas",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 51.384,
    "supportRPS": 44.507,
@@ -1396,6 +1489,7 @@
  },
  {
    "GeoName": "Utah",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 55.689,
    "supportRPS": 41.215,
@@ -1411,6 +1505,7 @@
  },
  {
    "GeoName": "Vermont",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 59.492,
    "supportRPS": 53.692,
@@ -1426,6 +1521,7 @@
  },
  {
    "GeoName": "Virginia",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 60.314,
    "supportRPS": 48.885,
@@ -1441,6 +1537,7 @@
  },
  {
    "GeoName": "Washington",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 55.726,
    "supportRPS": 45.728,
@@ -1456,6 +1553,7 @@
  },
  {
    "GeoName": "West Virginia",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 54.866,
    "supportRPS": 35.308,
@@ -1471,6 +1569,7 @@
  },
  {
    "GeoName": "Wisconsin",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 57.193,
    "supportRPS": 48.434,
@@ -1486,6 +1585,7 @@
  },
  {
    "GeoName": "Wyoming",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 49.276,
    "supportRPS": 28.784,
