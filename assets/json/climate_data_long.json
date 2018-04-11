@@ -12,7 +12,7 @@
    "worried": 57.212,
    "harmUS": 61.852,
    "Industry": "Manufacturing",
-   "Electoral votes": 9,
+   "Electoral_Votes": 9,
    "Population": 4447100
  },
  {
@@ -28,7 +28,7 @@
    "worried": 82.333,
    "harmUS": 75.227,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 626932
  },
  {
@@ -44,7 +44,7 @@
    "worried": 79.293,
    "harmUS": 75.873,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 10,
+   "Electoral_Votes": 10,
    "Population": 5130632
  },
  {
@@ -60,7 +60,7 @@
    "worried": 70.307,
    "harmUS": 69.15,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 6,
+   "Electoral_Votes": 6,
    "Population": 2673400
  },
  {
@@ -76,7 +76,7 @@
    "worried": 82.064,
    "harmUS": 78.662,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 55,
+   "Electoral_Votes": 55,
    "Population": 33871648
  },
  {
@@ -92,7 +92,7 @@
    "worried": 80.406,
    "harmUS": 76.154,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 9,
+   "Electoral_Votes": 9,
    "Population": 4301261
  },
  {
@@ -108,7 +108,7 @@
    "worried": 78.429,
    "harmUS": 76.013,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 7,
+   "Electoral_Votes": 7,
    "Population": 3405565
  },
  {
@@ -124,7 +124,7 @@
    "worried": 69.526,
    "harmUS": 71.977,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 783600
  },
  {
@@ -140,7 +140,7 @@
    "worried": 68.583,
    "harmUS": 72.355,
    "Industry": "Retail trade",
-   "Electoral votes": 27,
+   "Electoral_Votes": 27,
    "Population": 15982378
  },
  {
@@ -156,7 +156,7 @@
    "worried": 62.567,
    "harmUS": 65.937,
    "Industry": "Retail trade",
-   "Electoral votes": 15,
+   "Electoral_Votes": 15,
    "Population": 8186453
  },
  {
@@ -172,7 +172,7 @@
    "worried": 83.714,
    "harmUS": 78.823,
    "Industry": "Accommodation and food services",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1211537
  },
  {
@@ -188,7 +188,7 @@
    "worried": 85.331,
    "harmUS": 77.82,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1293953
  },
  {
@@ -204,7 +204,7 @@
    "worried": 68.935,
    "harmUS": 70.588,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 21,
+   "Electoral_Votes": 21,
    "Population": 12419293
  },
  {
@@ -220,7 +220,7 @@
    "worried": 62.83,
    "harmUS": 66.523,
    "Industry": "Manufacturing",
-   "Electoral votes": 11,
+   "Electoral_Votes": 11,
    "Population": 6080485
  },
  {
@@ -236,7 +236,7 @@
    "worried": 72.6,
    "harmUS": 69.345,
    "Industry": "Manufacturing",
-   "Electoral votes": 7,
+   "Electoral_Votes": 7,
    "Population": 2926324
  },
  {
@@ -252,7 +252,7 @@
    "worried": 72.754,
    "harmUS": 71.747,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 6,
+   "Electoral_Votes": 6,
    "Population": 2688418
  },
  {
@@ -268,7 +268,7 @@
    "worried": 64.172,
    "harmUS": 67.324,
    "Industry": "Manufacturing",
-   "Electoral votes": 8,
+   "Electoral_Votes": 8,
    "Population": 4041769
  },
  {
@@ -284,7 +284,7 @@
    "worried": 67.175,
    "harmUS": 65.899,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 9,
+   "Electoral_Votes": 9,
    "Population": 4468976
  },
  {
@@ -300,7 +300,7 @@
    "worried": 73.006,
    "harmUS": 74.748,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1274923
  },
  {
@@ -316,7 +316,7 @@
    "worried": 73.412,
    "harmUS": 72.735,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 10,
+   "Electoral_Votes": 10,
    "Population": 5296486
  },
  {
@@ -332,7 +332,7 @@
    "worried": 75.681,
    "harmUS": 76.968,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 12,
+   "Electoral_Votes": 12,
    "Population": 6349097
  },
  {
@@ -348,7 +348,7 @@
    "worried": 65.166,
    "harmUS": 67.84,
    "Industry": "Manufacturing",
-   "Electoral votes": 17,
+   "Electoral_Votes": 17,
    "Population": 9938444
  },
  {
@@ -364,7 +364,7 @@
    "worried": 74.041,
    "harmUS": 71.402,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 10,
+   "Electoral_Votes": 10,
    "Population": 4919479
  },
  {
@@ -380,7 +380,7 @@
    "worried": 60.065,
    "harmUS": 62.897,
    "Industry": "Manufacturing",
-   "Electoral votes": 6,
+   "Electoral_Votes": 6,
    "Population": 2844658
  },
  {
@@ -396,7 +396,7 @@
    "worried": 71.376,
    "harmUS": 70.007,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 11,
+   "Electoral_Votes": 11,
    "Population": 5595211
  },
  {
@@ -412,7 +412,7 @@
    "worried": 80.511,
    "harmUS": 72.057,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 902195
  },
  {
@@ -428,7 +428,7 @@
    "worried": 71.582,
    "harmUS": 70.213,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 1711263
  },
  {
@@ -444,7 +444,7 @@
    "worried": 81.119,
    "harmUS": 74.869,
    "Industry": "Accommodation and food services",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 1998257
  },
  {
@@ -460,7 +460,7 @@
    "worried": 77.099,
    "harmUS": 74.607,
    "Industry": "Retail trade",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1235786
  },
  {
@@ -476,7 +476,7 @@
    "worried": 78.016,
    "harmUS": 75.923,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 15,
+   "Electoral_Votes": 15,
    "Population": 8414350
  },
  {
@@ -492,7 +492,7 @@
    "worried": 77.168,
    "harmUS": 72.669,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 1819046
  },
  {
@@ -508,7 +508,7 @@
    "worried": 76.654,
    "harmUS": 78.1,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 31,
+   "Electoral_Votes": 31,
    "Population": 18976457
  },
  {
@@ -524,7 +524,7 @@
    "worried": 71.269,
    "harmUS": 69.917,
    "Industry": "Retail trade",
-   "Electoral votes": 15,
+   "Electoral_Votes": 15,
    "Population": 8049313
  },
  {
@@ -540,7 +540,7 @@
    "worried": 70.427,
    "harmUS": 65.508,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 642200
  },
  {
@@ -556,7 +556,7 @@
    "worried": 69.65,
    "harmUS": 70.243,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 20,
+   "Electoral_Votes": 20,
    "Population": 11353140
  },
  {
@@ -572,7 +572,7 @@
    "worried": 69.136,
    "harmUS": 68.435,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 7,
+   "Electoral_Votes": 7,
    "Population": 3450654
  },
  {
@@ -588,7 +588,7 @@
    "worried": 82.229,
    "harmUS": 79.027,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 7,
+   "Electoral_Votes": 7,
    "Population": 3421399
  },
  {
@@ -604,7 +604,7 @@
    "worried": 74.476,
    "harmUS": 72.565,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 21,
+   "Electoral_Votes": 21,
    "Population": 12281054
  },
  {
@@ -620,7 +620,7 @@
    "worried": 74.04,
    "harmUS": 75.45,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1048319
  },
  {
@@ -636,7 +636,7 @@
    "worried": 63.776,
    "harmUS": 64,
    "Industry": "Retail trade",
-   "Electoral votes": 8,
+   "Electoral_Votes": 8,
    "Population": 4012012
  },
  {
@@ -652,7 +652,7 @@
    "worried": 76.584,
    "harmUS": 72.547,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 754844
  },
  {
@@ -668,7 +668,7 @@
    "worried": 64.232,
    "harmUS": 68.974,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 11,
+   "Electoral_Votes": 11,
    "Population": 5689283
  },
  {
@@ -684,7 +684,7 @@
    "worried": 73.017,
    "harmUS": 73.514,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 34,
+   "Electoral_Votes": 34,
    "Population": 20851820
  },
  {
@@ -700,7 +700,7 @@
    "worried": 80.338,
    "harmUS": 73.616,
    "Industry": "Retail trade",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 2233169
  },
  {
@@ -716,7 +716,7 @@
    "worried": 76.494,
    "harmUS": 74.686,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 608827
  },
  {
@@ -732,7 +732,7 @@
    "worried": 72.787,
    "harmUS": 71.603,
    "Industry": "Retail trade",
-   "Electoral votes": 13,
+   "Electoral_Votes": 13,
    "Population": 7078515
  },
  {
@@ -748,7 +748,7 @@
    "worried": 80.399,
    "harmUS": 77.758,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 11,
+   "Electoral_Votes": 11,
    "Population": 5894121
  },
  {
@@ -764,7 +764,7 @@
    "worried": 67.449,
    "harmUS": 62.955,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 1808344
  },
  {
@@ -780,7 +780,7 @@
    "worried": 68.249,
    "harmUS": 70.289,
    "Industry": "Manufacturing",
-   "Electoral votes": 10,
+   "Electoral_Votes": 10,
    "Population": 5363675
  },
  {
@@ -796,7 +796,7 @@
    "worried": 78.612,
    "harmUS": 64.867,
    "Industry": "Accommodation and food services",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 493782
  },
  {
@@ -812,7 +812,7 @@
    "worried": 29.737,
    "harmUS": 33.758,
    "Industry": "Manufacturing",
-   "Electoral votes": 9,
+   "Electoral_Votes": 9,
    "Population": 4447100
  },
  {
@@ -828,7 +828,7 @@
    "worried": 37.661,
    "harmUS": 39.803,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 626932
  },
  {
@@ -844,7 +844,7 @@
    "worried": 30.769,
    "harmUS": 35.6,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 10,
+   "Electoral_Votes": 10,
    "Population": 5130632
  },
  {
@@ -860,7 +860,7 @@
    "worried": 29.635,
    "harmUS": 32.995,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 6,
+   "Electoral_Votes": 6,
    "Population": 2673400
  },
  {
@@ -876,7 +876,7 @@
    "worried": 37.6,
    "harmUS": 41.747,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 55,
+   "Electoral_Votes": 55,
    "Population": 33871648
  },
  {
@@ -892,7 +892,7 @@
    "worried": 32.579,
    "harmUS": 36.662,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 9,
+   "Electoral_Votes": 9,
    "Population": 4301261
  },
  {
@@ -908,7 +908,7 @@
    "worried": 32.513,
    "harmUS": 35.106,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 7,
+   "Electoral_Votes": 7,
    "Population": 3405565
  },
  {
@@ -924,7 +924,7 @@
    "worried": 31.031,
    "harmUS": 36.567,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 783600
  },
  {
@@ -940,7 +940,7 @@
    "worried": 30.87,
    "harmUS": 35.602,
    "Industry": "Retail trade",
-   "Electoral votes": 27,
+   "Electoral_Votes": 27,
    "Population": 15982378
  },
  {
@@ -956,7 +956,7 @@
    "worried": 30.93,
    "harmUS": 35.337,
    "Industry": "Retail trade",
-   "Electoral votes": 15,
+   "Electoral_Votes": 15,
    "Population": 8186453
  },
  {
@@ -972,7 +972,7 @@
    "worried": 42.191,
    "harmUS": 44.662,
    "Industry": "Accommodation and food services",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1211537
  },
  {
@@ -988,7 +988,7 @@
    "worried": 29.987,
    "harmUS": 31.101,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1293953
  },
  {
@@ -1004,7 +1004,7 @@
    "worried": 34.727,
    "harmUS": 37.323,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 21,
+   "Electoral_Votes": 21,
    "Population": 12419293
  },
  {
@@ -1020,7 +1020,7 @@
    "worried": 28.752,
    "harmUS": 33.859,
    "Industry": "Manufacturing",
-   "Electoral votes": 11,
+   "Electoral_Votes": 11,
    "Population": 6080485
  },
  {
@@ -1036,7 +1036,7 @@
    "worried": 33.323,
    "harmUS": 38.728,
    "Industry": "Manufacturing",
-   "Electoral votes": 7,
+   "Electoral_Votes": 7,
    "Population": 2926324
  },
  {
@@ -1052,7 +1052,7 @@
    "worried": 29.692,
    "harmUS": 33.419,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 6,
+   "Electoral_Votes": 6,
    "Population": 2688418
  },
  {
@@ -1068,7 +1068,7 @@
    "worried": 28.858,
    "harmUS": 34.862,
    "Industry": "Manufacturing",
-   "Electoral votes": 8,
+   "Electoral_Votes": 8,
    "Population": 4041769
  },
  {
@@ -1084,7 +1084,7 @@
    "worried": 30.722,
    "harmUS": 34.875,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 9,
+   "Electoral_Votes": 9,
    "Population": 4468976
  },
  {
@@ -1100,7 +1100,7 @@
    "worried": 30.339,
    "harmUS": 35.498,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1274923
  },
  {
@@ -1116,7 +1116,7 @@
    "worried": 37.226,
    "harmUS": 40.003,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 10,
+   "Electoral_Votes": 10,
    "Population": 5296486
  },
  {
@@ -1132,7 +1132,7 @@
    "worried": 34.703,
    "harmUS": 37.549,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 12,
+   "Electoral_Votes": 12,
    "Population": 6349097
  },
  {
@@ -1148,7 +1148,7 @@
    "worried": 33.316,
    "harmUS": 35.436,
    "Industry": "Manufacturing",
-   "Electoral votes": 17,
+   "Electoral_Votes": 17,
    "Population": 9938444
  },
  {
@@ -1164,7 +1164,7 @@
    "worried": 31.383,
    "harmUS": 34.805,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 10,
+   "Electoral_Votes": 10,
    "Population": 4919479
  },
  {
@@ -1180,7 +1180,7 @@
    "worried": 31.373,
    "harmUS": 34.973,
    "Industry": "Manufacturing",
-   "Electoral votes": 6,
+   "Electoral_Votes": 6,
    "Population": 2844658
  },
  {
@@ -1196,7 +1196,7 @@
    "worried": 30.975,
    "harmUS": 34.513,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 11,
+   "Electoral_Votes": 11,
    "Population": 5595211
  },
  {
@@ -1212,7 +1212,7 @@
    "worried": 31.166,
    "harmUS": 35.44,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 902195
  },
  {
@@ -1228,7 +1228,7 @@
    "worried": 30.282,
    "harmUS": 35.018,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 1711263
  },
  {
@@ -1244,7 +1244,7 @@
    "worried": 32.731,
    "harmUS": 38.084,
    "Industry": "Accommodation and food services",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 1998257
  },
  {
@@ -1260,7 +1260,7 @@
    "worried": 29.922,
    "harmUS": 33.4,
    "Industry": "Retail trade",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1235786
  },
  {
@@ -1276,7 +1276,7 @@
    "worried": 38.218,
    "harmUS": 39.138,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 15,
+   "Electoral_Votes": 15,
    "Population": 8414350
  },
  {
@@ -1292,7 +1292,7 @@
    "worried": 33.044,
    "harmUS": 41.26,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 1819046
  },
  {
@@ -1308,7 +1308,7 @@
    "worried": 43.474,
    "harmUS": 43.246,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 31,
+   "Electoral_Votes": 31,
    "Population": 18976457
  },
  {
@@ -1324,7 +1324,7 @@
    "worried": 31.094,
    "harmUS": 34.586,
    "Industry": "Retail trade",
-   "Electoral votes": 15,
+   "Electoral_Votes": 15,
    "Population": 8049313
  },
  {
@@ -1340,7 +1340,7 @@
    "worried": 28.089,
    "harmUS": 33.356,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 642200
  },
  {
@@ -1356,7 +1356,7 @@
    "worried": 29.748,
    "harmUS": 34.339,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 20,
+   "Electoral_Votes": 20,
    "Population": 11353140
  },
  {
@@ -1372,7 +1372,7 @@
    "worried": 29.01,
    "harmUS": 33.348,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 7,
+   "Electoral_Votes": 7,
    "Population": 3450654
  },
  {
@@ -1388,7 +1388,7 @@
    "worried": 34.677,
    "harmUS": 36.706,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 7,
+   "Electoral_Votes": 7,
    "Population": 3421399
  },
  {
@@ -1404,7 +1404,7 @@
    "worried": 34.062,
    "harmUS": 36.496,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 21,
+   "Electoral_Votes": 21,
    "Population": 12281054
  },
  {
@@ -1420,7 +1420,7 @@
    "worried": 30.619,
    "harmUS": 35.296,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 4,
+   "Electoral_Votes": 4,
    "Population": 1048319
  },
  {
@@ -1436,7 +1436,7 @@
    "worried": 32.856,
    "harmUS": 35.658,
    "Industry": "Retail trade",
-   "Electoral votes": 8,
+   "Electoral_Votes": 8,
    "Population": 4012012
  },
  {
@@ -1452,7 +1452,7 @@
    "worried": 32.865,
    "harmUS": 35.23,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 754844
  },
  {
@@ -1468,7 +1468,7 @@
    "worried": 30.422,
    "harmUS": 34.689,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 11,
+   "Electoral_Votes": 11,
    "Population": 5689283
  },
  {
@@ -1484,7 +1484,7 @@
    "worried": 31.144,
    "harmUS": 35.489,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 34,
+   "Electoral_Votes": 34,
    "Population": 20851820
  },
  {
@@ -1500,7 +1500,7 @@
    "worried": 29.153,
    "harmUS": 32.632,
    "Industry": "Retail trade",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 2233169
  },
  {
@@ -1516,7 +1516,7 @@
    "worried": 32.542,
    "harmUS": 36.67,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 608827
  },
  {
@@ -1532,7 +1532,7 @@
    "worried": 34.757,
    "harmUS": 36.974,
    "Industry": "Retail trade",
-   "Electoral votes": 13,
+   "Electoral_Votes": 13,
    "Population": 7078515
  },
  {
@@ -1548,7 +1548,7 @@
    "worried": 33.925,
    "harmUS": 37.444,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 11,
+   "Electoral_Votes": 11,
    "Population": 5894121
  },
  {
@@ -1564,7 +1564,7 @@
    "worried": 29.746,
    "harmUS": 37.093,
    "Industry": "Health care and social assistance",
-   "Electoral votes": 5,
+   "Electoral_Votes": 5,
    "Population": 1808344
  },
  {
@@ -1580,7 +1580,7 @@
    "worried": 32.525,
    "harmUS": 35.536,
    "Industry": "Manufacturing",
-   "Electoral votes": 10,
+   "Electoral_Votes": 10,
    "Population": 5363675
  },
  {
@@ -1596,7 +1596,7 @@
    "worried": 32.137,
    "harmUS": 39.31,
    "Industry": "Accommodation and food services",
-   "Electoral votes": 3,
+   "Electoral_Votes": 3,
    "Population": 493782
  }
 ]
