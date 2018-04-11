@@ -1,6 +1,7 @@
 [
  {
    "GeoName": "Alabama",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 78.294,
    "supportRPS": 62.118,
@@ -11,11 +12,12 @@
    "worried": 57.212,
    "harmUS": 61.852,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 9,
+   "Electoral votes": 9,
    "Population": 4447100
  },
  {
    "GeoName": "Alaska",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 89.054,
    "supportRPS": 79.163,
@@ -26,11 +28,12 @@
    "worried": 82.333,
    "harmUS": 75.227,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 626932
  },
  {
    "GeoName": "Arizona",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 85.901,
    "supportRPS": 83.176,
@@ -41,11 +44,12 @@
    "worried": 79.293,
    "harmUS": 75.873,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 10,
+   "Electoral votes": 10,
    "Population": 5130632
  },
  {
    "GeoName": "Arkansas",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 81.774,
    "supportRPS": 77.778,
@@ -56,11 +60,12 @@
    "worried": 70.307,
    "harmUS": 69.15,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 6,
+   "Electoral votes": 6,
    "Population": 2673400
  },
  {
    "GeoName": "California",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 86.741,
    "supportRPS": 82.487,
@@ -71,11 +76,12 @@
    "worried": 82.064,
    "harmUS": 78.662,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 55,
+   "Electoral votes": 55,
    "Population": 33871648
  },
  {
    "GeoName": "Colorado",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 86.984,
    "supportRPS": 83.252,
@@ -86,11 +92,12 @@
    "worried": 80.406,
    "harmUS": 76.154,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 9,
+   "Electoral votes": 9,
    "Population": 4301261
  },
  {
    "GeoName": "Connecticut",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 85.685,
    "supportRPS": 83.379,
@@ -101,11 +108,12 @@
    "worried": 78.429,
    "harmUS": 76.013,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 7,
+   "Electoral votes": 7,
    "Population": 3405565
  },
  {
    "GeoName": "Delaware",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 81.124,
    "supportRPS": 76.024,
@@ -116,11 +124,12 @@
    "worried": 69.526,
    "harmUS": 71.977,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 783600
  },
  {
    "GeoName": "Florida",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 79.723,
    "supportRPS": 77.117,
@@ -131,11 +140,12 @@
    "worried": 68.583,
    "harmUS": 72.355,
    "Industry": "Retail trade",
-   "Electoral_Votes": 27,
+   "Electoral votes": 27,
    "Population": 15982378
  },
  {
    "GeoName": "Georgia",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 77.602,
    "supportRPS": 71.203,
@@ -146,11 +156,12 @@
    "worried": 62.567,
    "harmUS": 65.937,
    "Industry": "Retail trade",
-   "Electoral_Votes": 15,
+   "Electoral votes": 15,
    "Population": 8186453
  },
  {
    "GeoName": "Hawaii",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 89.909,
    "supportRPS": 83.007,
@@ -161,11 +172,12 @@
    "worried": 83.714,
    "harmUS": 78.823,
    "Industry": "Accommodation and food services",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1211537
  },
  {
    "GeoName": "Idaho",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.665,
    "supportRPS": 89.591,
@@ -176,11 +188,12 @@
    "worried": 85.331,
    "harmUS": 77.82,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1293953
  },
  {
    "GeoName": "Illinois",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 86.97,
    "supportRPS": 77.758,
@@ -191,11 +204,12 @@
    "worried": 68.935,
    "harmUS": 70.588,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 21,
+   "Electoral votes": 21,
    "Population": 12419293
  },
  {
    "GeoName": "Indiana",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 82.94,
    "supportRPS": 73.204,
@@ -206,11 +220,12 @@
    "worried": 62.83,
    "harmUS": 66.523,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 11,
+   "Electoral votes": 11,
    "Population": 6080485
  },
  {
    "GeoName": "Iowa",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.474,
    "supportRPS": 77.625,
@@ -221,11 +236,12 @@
    "worried": 72.6,
    "harmUS": 69.345,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 7,
+   "Electoral votes": 7,
    "Population": 2926324
  },
  {
    "GeoName": "Kansas",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 85.536,
    "supportRPS": 83.987,
@@ -236,11 +252,12 @@
    "worried": 72.754,
    "harmUS": 71.747,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 6,
+   "Electoral votes": 6,
    "Population": 2688418
  },
  {
    "GeoName": "Kentucky",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 82.304,
    "supportRPS": 68.13,
@@ -251,11 +268,12 @@
    "worried": 64.172,
    "harmUS": 67.324,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 8,
+   "Electoral votes": 8,
    "Population": 4041769
  },
  {
    "GeoName": "Louisiana",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 80.715,
    "supportRPS": 73.527,
@@ -266,11 +284,12 @@
    "worried": 67.175,
    "harmUS": 65.899,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 9,
+   "Electoral votes": 9,
    "Population": 4468976
  },
  {
    "GeoName": "Maine",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 85.064,
    "supportRPS": 79.368,
@@ -281,11 +300,12 @@
    "worried": 73.006,
    "harmUS": 74.748,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1274923
  },
  {
    "GeoName": "Maryland",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 82.493,
    "supportRPS": 77.082,
@@ -296,11 +316,12 @@
    "worried": 73.412,
    "harmUS": 72.735,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 10,
+   "Electoral votes": 10,
    "Population": 5296486
  },
  {
    "GeoName": "Massachusetts",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 84.884,
    "supportRPS": 81.642,
@@ -311,11 +332,12 @@
    "worried": 75.681,
    "harmUS": 76.968,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 12,
+   "Electoral votes": 12,
    "Population": 6349097
  },
  {
    "GeoName": "Michigan",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 85.093,
    "supportRPS": 77.232,
@@ -326,11 +348,12 @@
    "worried": 65.166,
    "harmUS": 67.84,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 17,
+   "Electoral votes": 17,
    "Population": 9938444
  },
  {
    "GeoName": "Minnesota",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.567,
    "supportRPS": 81.464,
@@ -341,11 +364,12 @@
    "worried": 74.041,
    "harmUS": 71.402,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 10,
+   "Electoral votes": 10,
    "Population": 4919479
  },
  {
    "GeoName": "Mississippi",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 80.84,
    "supportRPS": 64.817,
@@ -356,11 +380,12 @@
    "worried": 60.065,
    "harmUS": 62.897,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 6,
+   "Electoral votes": 6,
    "Population": 2844658
  },
  {
    "GeoName": "Missouri",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 83.604,
    "supportRPS": 80.835,
@@ -371,11 +396,12 @@
    "worried": 71.376,
    "harmUS": 70.007,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 11,
+   "Electoral votes": 11,
    "Population": 5595211
  },
  {
    "GeoName": "Montana",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.84,
    "supportRPS": 82.936,
@@ -386,11 +412,12 @@
    "worried": 80.511,
    "harmUS": 72.057,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 902195
  },
  {
    "GeoName": "Nebraska",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 85.767,
    "supportRPS": 81.171,
@@ -401,11 +428,12 @@
    "worried": 71.582,
    "harmUS": 70.213,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 1711263
  },
  {
    "GeoName": "Nevada",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.353,
    "supportRPS": 82.438,
@@ -416,11 +444,12 @@
    "worried": 81.119,
    "harmUS": 74.869,
    "Industry": "Accommodation and food services",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 1998257
  },
  {
    "GeoName": "New Hampshire",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 86.883,
    "supportRPS": 82.45,
@@ -431,11 +460,12 @@
    "worried": 77.099,
    "harmUS": 74.607,
    "Industry": "Retail trade",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1235786
  },
  {
    "GeoName": "New Jersey",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 85.812,
    "supportRPS": 81.656,
@@ -446,11 +476,12 @@
    "worried": 78.016,
    "harmUS": 75.923,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 15,
+   "Electoral votes": 15,
    "Population": 8414350
  },
  {
    "GeoName": "New Mexico",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 86.565,
    "supportRPS": 74.96,
@@ -461,11 +492,12 @@
    "worried": 77.168,
    "harmUS": 72.669,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 1819046
  },
  {
    "GeoName": "New York",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 83.944,
    "supportRPS": 80.903,
@@ -476,11 +508,12 @@
    "worried": 76.654,
    "harmUS": 78.1,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 31,
+   "Electoral votes": 31,
    "Population": 18976457
  },
  {
    "GeoName": "North Carolina",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 81.739,
    "supportRPS": 76.832,
@@ -491,11 +524,12 @@
    "worried": 71.269,
    "harmUS": 69.917,
    "Industry": "Retail trade",
-   "Electoral_Votes": 15,
+   "Electoral votes": 15,
    "Population": 8049313
  },
  {
    "GeoName": "North Dakota",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.044,
    "supportRPS": 77.157,
@@ -506,11 +540,12 @@
    "worried": 70.427,
    "harmUS": 65.508,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 642200
  },
  {
    "GeoName": "Ohio",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 82.666,
    "supportRPS": 77.925,
@@ -521,11 +556,12 @@
    "worried": 69.65,
    "harmUS": 70.243,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 20,
+   "Electoral votes": 20,
    "Population": 11353140
  },
  {
    "GeoName": "Oklahoma",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 82.411,
    "supportRPS": 76.059,
@@ -536,11 +572,12 @@
    "worried": 69.136,
    "harmUS": 68.435,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 7,
+   "Electoral votes": 7,
    "Population": 3450654
  },
  {
    "GeoName": "Oregon",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.994,
    "supportRPS": 84.314,
@@ -551,11 +588,12 @@
    "worried": 82.229,
    "harmUS": 79.027,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 7,
+   "Electoral votes": 7,
    "Population": 3421399
  },
  {
    "GeoName": "Pennsylvania",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 84.833,
    "supportRPS": 77.308,
@@ -566,11 +604,12 @@
    "worried": 74.476,
    "harmUS": 72.565,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 21,
+   "Electoral votes": 21,
    "Population": 12281054
  },
  {
    "GeoName": "Rhode Island",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 83.862,
    "supportRPS": 80.049,
@@ -581,11 +620,12 @@
    "worried": 74.04,
    "harmUS": 75.45,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1048319
  },
  {
    "GeoName": "South Carolina",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 78.391,
    "supportRPS": 72.574,
@@ -596,11 +636,12 @@
    "worried": 63.776,
    "harmUS": 64,
    "Industry": "Retail trade",
-   "Electoral_Votes": 8,
+   "Electoral votes": 8,
    "Population": 4012012
  },
  {
    "GeoName": "South Dakota",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.331,
    "supportRPS": 84.843,
@@ -611,11 +652,12 @@
    "worried": 76.584,
    "harmUS": 72.547,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 754844
  },
  {
    "GeoName": "Tennessee",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 80.38,
    "supportRPS": 70.15,
@@ -626,11 +668,12 @@
    "worried": 64.232,
    "harmUS": 68.974,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 11,
+   "Electoral votes": 11,
    "Population": 5689283
  },
  {
    "GeoName": "Texas",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 81.744,
    "supportRPS": 72.633,
@@ -641,11 +684,12 @@
    "worried": 73.017,
    "harmUS": 73.514,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 34,
+   "Electoral votes": 34,
    "Population": 20851820
  },
  {
    "GeoName": "Utah",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 86.268,
    "supportRPS": 83.246,
@@ -656,11 +700,12 @@
    "worried": 80.338,
    "harmUS": 73.616,
    "Industry": "Retail trade",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 2233169
  },
  {
    "GeoName": "Vermont",
+   "Region": "Northeast",
    "Group": "Dem",
    "regulate": 88.307,
    "supportRPS": 79.962,
@@ -671,11 +716,12 @@
    "worried": 76.494,
    "harmUS": 74.686,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 608827
  },
  {
    "GeoName": "Virginia",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 84.154,
    "supportRPS": 78.657,
@@ -686,11 +732,12 @@
    "worried": 72.787,
    "harmUS": 71.603,
    "Industry": "Retail trade",
-   "Electoral_Votes": 13,
+   "Electoral votes": 13,
    "Population": 7078515
  },
  {
    "GeoName": "Washington",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 87.812,
    "supportRPS": 82.802,
@@ -701,11 +748,12 @@
    "worried": 80.399,
    "harmUS": 77.758,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 11,
+   "Electoral votes": 11,
    "Population": 5894121
  },
  {
    "GeoName": "West Virginia",
+   "Region": "South",
    "Group": "Dem",
    "regulate": 85.165,
    "supportRPS": 61.467,
@@ -716,11 +764,12 @@
    "worried": 67.449,
    "harmUS": 62.955,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 1808344
  },
  {
    "GeoName": "Wisconsin",
+   "Region": "Midwest",
    "Group": "Dem",
    "regulate": 87.553,
    "supportRPS": 77.97,
@@ -731,11 +780,12 @@
    "worried": 68.249,
    "harmUS": 70.289,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 10,
+   "Electoral votes": 10,
    "Population": 5363675
  },
  {
    "GeoName": "Wyoming",
+   "Region": "West",
    "Group": "Dem",
    "regulate": 90.917,
    "supportRPS": 68.665,
@@ -746,11 +796,12 @@
    "worried": 78.612,
    "harmUS": 64.867,
    "Industry": "Accommodation and food services",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 493782
  },
  {
    "GeoName": "Alabama",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 56.763,
    "supportRPS": 45.44,
@@ -761,11 +812,12 @@
    "worried": 29.737,
    "harmUS": 33.758,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 9,
+   "Electoral votes": 9,
    "Population": 4447100
  },
  {
    "GeoName": "Alaska",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 61.148,
    "supportRPS": 43.569,
@@ -776,11 +828,12 @@
    "worried": 37.661,
    "harmUS": 39.803,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 626932
  },
  {
    "GeoName": "Arizona",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 54.901,
    "supportRPS": 46.172,
@@ -791,11 +844,12 @@
    "worried": 30.769,
    "harmUS": 35.6,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 10,
+   "Electoral votes": 10,
    "Population": 5130632
  },
  {
    "GeoName": "Arkansas",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 55.849,
    "supportRPS": 44.235,
@@ -806,11 +860,12 @@
    "worried": 29.635,
    "harmUS": 32.995,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 6,
+   "Electoral votes": 6,
    "Population": 2673400
  },
  {
    "GeoName": "California",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 60.054,
    "supportRPS": 53.227,
@@ -821,11 +876,12 @@
    "worried": 37.6,
    "harmUS": 41.747,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 55,
+   "Electoral votes": 55,
    "Population": 33871648
  },
  {
    "GeoName": "Colorado",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 54.203,
    "supportRPS": 46.737,
@@ -836,11 +892,12 @@
    "worried": 32.579,
    "harmUS": 36.662,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 9,
+   "Electoral votes": 9,
    "Population": 4301261
  },
  {
    "GeoName": "Connecticut",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 57.892,
    "supportRPS": 57.239,
@@ -851,11 +908,12 @@
    "worried": 32.513,
    "harmUS": 35.106,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 7,
+   "Electoral votes": 7,
    "Population": 3405565
  },
  {
    "GeoName": "Delaware",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.805,
    "supportRPS": 51.799,
@@ -866,11 +924,12 @@
    "worried": 31.031,
    "harmUS": 36.567,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 783600
  },
  {
    "GeoName": "Florida",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 61.733,
    "supportRPS": 51.854,
@@ -881,11 +940,12 @@
    "worried": 30.87,
    "harmUS": 35.602,
    "Industry": "Retail trade",
-   "Electoral_Votes": 27,
+   "Electoral votes": 27,
    "Population": 15982378
  },
  {
    "GeoName": "Georgia",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 59.134,
    "supportRPS": 47.895,
@@ -896,11 +956,12 @@
    "worried": 30.93,
    "harmUS": 35.337,
    "Industry": "Retail trade",
-   "Electoral_Votes": 15,
+   "Electoral votes": 15,
    "Population": 8186453
  },
  {
    "GeoName": "Hawaii",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 59.289,
    "supportRPS": 56.639,
@@ -911,11 +972,12 @@
    "worried": 42.191,
    "harmUS": 44.662,
    "Industry": "Accommodation and food services",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1211537
  },
  {
    "GeoName": "Idaho",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 55.086,
    "supportRPS": 48.579,
@@ -926,11 +988,12 @@
    "worried": 29.987,
    "harmUS": 31.101,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1293953
  },
  {
    "GeoName": "Illinois",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 61.252,
    "supportRPS": 56.553,
@@ -941,11 +1004,12 @@
    "worried": 34.727,
    "harmUS": 37.323,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 21,
+   "Electoral votes": 21,
    "Population": 12419293
  },
  {
    "GeoName": "Indiana",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 54.099,
    "supportRPS": 44.064,
@@ -956,11 +1020,12 @@
    "worried": 28.752,
    "harmUS": 33.859,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 11,
+   "Electoral votes": 11,
    "Population": 6080485
  },
  {
    "GeoName": "Iowa",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 51.2,
    "supportRPS": 44.545,
@@ -971,11 +1036,12 @@
    "worried": 33.323,
    "harmUS": 38.728,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 7,
+   "Electoral votes": 7,
    "Population": 2926324
  },
  {
    "GeoName": "Kansas",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 54.427,
    "supportRPS": 48.811,
@@ -986,11 +1052,12 @@
    "worried": 29.692,
    "harmUS": 33.419,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 6,
+   "Electoral votes": 6,
    "Population": 2688418
  },
  {
    "GeoName": "Kentucky",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.19,
    "supportRPS": 48.331,
@@ -1001,11 +1068,12 @@
    "worried": 28.858,
    "harmUS": 34.862,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 8,
+   "Electoral votes": 8,
    "Population": 4041769
  },
  {
    "GeoName": "Louisiana",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 55.276,
    "supportRPS": 43.189,
@@ -1016,11 +1084,12 @@
    "worried": 30.722,
    "harmUS": 34.875,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 9,
+   "Electoral votes": 9,
    "Population": 4468976
  },
  {
    "GeoName": "Maine",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 58.235,
    "supportRPS": 54.548,
@@ -1031,11 +1100,12 @@
    "worried": 30.339,
    "harmUS": 35.498,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1274923
  },
  {
    "GeoName": "Maryland",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 62.251,
    "supportRPS": 52.499,
@@ -1046,11 +1116,12 @@
    "worried": 37.226,
    "harmUS": 40.003,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 10,
+   "Electoral votes": 10,
    "Population": 5296486
  },
  {
    "GeoName": "Massachusetts",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 61.871,
    "supportRPS": 57.111,
@@ -1061,11 +1132,12 @@
    "worried": 34.703,
    "harmUS": 37.549,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 12,
+   "Electoral votes": 12,
    "Population": 6349097
  },
  {
    "GeoName": "Michigan",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 56.308,
    "supportRPS": 50.378,
@@ -1076,11 +1148,12 @@
    "worried": 33.316,
    "harmUS": 35.436,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 17,
+   "Electoral votes": 17,
    "Population": 9938444
  },
  {
    "GeoName": "Minnesota",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 55.241,
    "supportRPS": 47.292,
@@ -1091,11 +1164,12 @@
    "worried": 31.383,
    "harmUS": 34.805,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 10,
+   "Electoral votes": 10,
    "Population": 4919479
  },
  {
    "GeoName": "Mississippi",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.408,
    "supportRPS": 47.836,
@@ -1106,11 +1180,12 @@
    "worried": 31.373,
    "harmUS": 34.973,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 6,
+   "Electoral votes": 6,
    "Population": 2844658
  },
  {
    "GeoName": "Missouri",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 54.691,
    "supportRPS": 47.547,
@@ -1121,11 +1196,12 @@
    "worried": 30.975,
    "harmUS": 34.513,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 11,
+   "Electoral votes": 11,
    "Population": 5595211
  },
  {
    "GeoName": "Montana",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 54.128,
    "supportRPS": 47.256,
@@ -1136,11 +1212,12 @@
    "worried": 31.166,
    "harmUS": 35.44,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 902195
  },
  {
    "GeoName": "Nebraska",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 53.99,
    "supportRPS": 46.02,
@@ -1151,11 +1228,12 @@
    "worried": 30.282,
    "harmUS": 35.018,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 1711263
  },
  {
    "GeoName": "Nevada",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 51.899,
    "supportRPS": 45.842,
@@ -1166,11 +1244,12 @@
    "worried": 32.731,
    "harmUS": 38.084,
    "Industry": "Accommodation and food services",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 1998257
  },
  {
    "GeoName": "New Hampshire",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 56.007,
    "supportRPS": 54.289,
@@ -1181,11 +1260,12 @@
    "worried": 29.922,
    "harmUS": 33.4,
    "Industry": "Retail trade",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1235786
  },
  {
    "GeoName": "New Jersey",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 66.56,
    "supportRPS": 56.169,
@@ -1196,11 +1276,12 @@
    "worried": 38.218,
    "harmUS": 39.138,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 15,
+   "Electoral votes": 15,
    "Population": 8414350
  },
  {
    "GeoName": "New Mexico",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 51.046,
    "supportRPS": 41.878,
@@ -1211,11 +1292,12 @@
    "worried": 33.044,
    "harmUS": 41.26,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 1819046
  },
  {
    "GeoName": "New York",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 72.833,
    "supportRPS": 57.979,
@@ -1226,11 +1308,12 @@
    "worried": 43.474,
    "harmUS": 43.246,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 31,
+   "Electoral votes": 31,
    "Population": 18976457
  },
  {
    "GeoName": "North Carolina",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.774,
    "supportRPS": 49.88,
@@ -1241,11 +1324,12 @@
    "worried": 31.094,
    "harmUS": 34.586,
    "Industry": "Retail trade",
-   "Electoral_Votes": 15,
+   "Electoral votes": 15,
    "Population": 8049313
  },
  {
    "GeoName": "North Dakota",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 53.04,
    "supportRPS": 44.264,
@@ -1256,11 +1340,12 @@
    "worried": 28.089,
    "harmUS": 33.356,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 642200
  },
  {
    "GeoName": "Ohio",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 53.305,
    "supportRPS": 47.342,
@@ -1271,11 +1356,12 @@
    "worried": 29.748,
    "harmUS": 34.339,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 20,
+   "Electoral votes": 20,
    "Population": 11353140
  },
  {
    "GeoName": "Oklahoma",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 56.261,
    "supportRPS": 41.735,
@@ -1286,11 +1372,12 @@
    "worried": 29.01,
    "harmUS": 33.348,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 7,
+   "Electoral votes": 7,
    "Population": 3450654
  },
  {
    "GeoName": "Oregon",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 60.36,
    "supportRPS": 52.133,
@@ -1301,11 +1388,12 @@
    "worried": 34.677,
    "harmUS": 36.706,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 7,
+   "Electoral votes": 7,
    "Population": 3421399
  },
  {
    "GeoName": "Pennsylvania",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 63.227,
    "supportRPS": 51.999,
@@ -1316,11 +1404,12 @@
    "worried": 34.062,
    "harmUS": 36.496,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 21,
+   "Electoral votes": 21,
    "Population": 12281054
  },
  {
    "GeoName": "Rhode Island",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 56.393,
    "supportRPS": 56.8,
@@ -1331,11 +1420,12 @@
    "worried": 30.619,
    "harmUS": 35.296,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 4,
+   "Electoral votes": 4,
    "Population": 1048319
  },
  {
    "GeoName": "South Carolina",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 58.448,
    "supportRPS": 49.861,
@@ -1346,11 +1436,12 @@
    "worried": 32.856,
    "harmUS": 35.658,
    "Industry": "Retail trade",
-   "Electoral_Votes": 8,
+   "Electoral votes": 8,
    "Population": 4012012
  },
  {
    "GeoName": "South Dakota",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 55.343,
    "supportRPS": 48.227,
@@ -1361,11 +1452,12 @@
    "worried": 32.865,
    "harmUS": 35.23,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 754844
  },
  {
    "GeoName": "Tennessee",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 57.757,
    "supportRPS": 42.929,
@@ -1376,11 +1468,12 @@
    "worried": 30.422,
    "harmUS": 34.689,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 11,
+   "Electoral votes": 11,
    "Population": 5689283
  },
  {
    "GeoName": "Texas",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 51.384,
    "supportRPS": 44.507,
@@ -1391,11 +1484,12 @@
    "worried": 31.144,
    "harmUS": 35.489,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 34,
+   "Electoral votes": 34,
    "Population": 20851820
  },
  {
    "GeoName": "Utah",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 55.689,
    "supportRPS": 41.215,
@@ -1406,11 +1500,12 @@
    "worried": 29.153,
    "harmUS": 32.632,
    "Industry": "Retail trade",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 2233169
  },
  {
    "GeoName": "Vermont",
+   "Region": "Northeast",
    "Group": "Rep",
    "regulate": 59.492,
    "supportRPS": 53.692,
@@ -1421,11 +1516,12 @@
    "worried": 32.542,
    "harmUS": 36.67,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 608827
  },
  {
    "GeoName": "Virginia",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 60.314,
    "supportRPS": 48.885,
@@ -1436,11 +1532,12 @@
    "worried": 34.757,
    "harmUS": 36.974,
    "Industry": "Retail trade",
-   "Electoral_Votes": 13,
+   "Electoral votes": 13,
    "Population": 7078515
  },
  {
    "GeoName": "Washington",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 55.726,
    "supportRPS": 45.728,
@@ -1451,11 +1548,12 @@
    "worried": 33.925,
    "harmUS": 37.444,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 11,
+   "Electoral votes": 11,
    "Population": 5894121
  },
  {
    "GeoName": "West Virginia",
+   "Region": "South",
    "Group": "Rep",
    "regulate": 54.866,
    "supportRPS": 35.308,
@@ -1466,11 +1564,12 @@
    "worried": 29.746,
    "harmUS": 37.093,
    "Industry": "Health care and social assistance",
-   "Electoral_Votes": 5,
+   "Electoral votes": 5,
    "Population": 1808344
  },
  {
    "GeoName": "Wisconsin",
+   "Region": "Midwest",
    "Group": "Rep",
    "regulate": 57.193,
    "supportRPS": 48.434,
@@ -1481,11 +1580,12 @@
    "worried": 32.525,
    "harmUS": 35.536,
    "Industry": "Manufacturing",
-   "Electoral_Votes": 10,
+   "Electoral votes": 10,
    "Population": 5363675
  },
  {
    "GeoName": "Wyoming",
+   "Region": "West",
    "Group": "Rep",
    "regulate": 49.276,
    "supportRPS": 28.784,
@@ -1496,7 +1596,7 @@
    "worried": 32.137,
    "harmUS": 39.31,
    "Industry": "Accommodation and food services",
-   "Electoral_Votes": 3,
+   "Electoral votes": 3,
    "Population": 493782
  }
 ]
