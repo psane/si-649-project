@@ -130,7 +130,7 @@ section {
 #republican-btn-2:hover {
     background-color: #E91D0E;
     color: #fff;
-    
+
 }
 
 #republican-btn-2.active {
@@ -139,7 +139,7 @@ section {
     outline: 0 !important;
 }
 .btn-next {
-    
+
     border-radius: 3px;
     border: solid 2px #4d4d4d;
     margin: 0 auto;
