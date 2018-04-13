@@ -81,10 +81,6 @@
     <section id="s-4">
         <div class="row">
             <p>Explore on your own -- What issues is your candidate concerned with? Which states are you visiting?</p>
-            <!-- <div class="btn-group" role="group" id="buttons">
-                <button id="democrat" class="btn dem clicked" onclick="showcontrols(this)">Democrats</button>
-                <button id="republican" class="btn rep" onclick="showcontrols(this)">Republicans</button>
-            </div> -->
             <div class="btn-group" role="group" id="buttons-2">
                 <button id="democrat-btn-2" class="btn active" onclick="showcontrols(this)">Democrats</button>
                 <button id="republican-btn-2" class="btn" onclick="showcontrols(this)">Republicans</button>
@@ -105,6 +101,7 @@
             <div class="tooltip"></div>
         </div>
         <svg class="chart4"></svg>
+        <svg class="chart5"></svg>
     </section>
 
     <script>
@@ -121,6 +118,7 @@
         dem = nested_data[0].values
         rep = nested_data[1].values
         drawChart4(dem,colorscaleD)
+        drawChart5(dem,colorscaleD)
     });
 
     function showcontrols(element) {
@@ -727,8 +725,200 @@
             .text((d) => d )
     }
 
-    function drawChart5() {
-        // small multiples
+    function drawChart5(data,color) {
+        var height = 3100 - margin.top - margin.bottom
+        var width = window.innerWidth - margin.left - margin.right
+        var chartwidth=width/5
+        var chartheight=200
+
+        var x = d3.scaleBand().rangeRound([0, chartwidth-margin.left-margin.left]).padding([0.1]);
+        var y = d3.scaleLinear().range([chartheight, 0]);
+
+        var chart = d3.select(".chart5")
+                    .attr("width", width)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+
+        chart.append("text")
+            .attr("x", width/2)
+            .attr("y", margin.top/2)
+            .attr("text-anchor", "middle")
+            .style("font-size", "24px")
+            .style("font-family","Raleway")
+            .style("font-weight", 500)
+            .text("Chart title");
+
+        var opinions = ["regulate","supportRPS", "happening", "human", "harmUS", "consensus", "fundrenewables", "worried"]
+        var barWidth = (chartwidth-margin.left-margin.left)/opinions.length;
+
+        x.domain(opinions)
+        y.domain([0, 100])//Math.max(d3.max(data, d => d.Worldwide_Gross), d3.max(data, d => d.US_Gross))]);
+
+        var bars1 = chart.selectAll(".bar").data(data)
+                    .enter().append("g")
+                    .attr("class", "bar")
+                    .attr("transform", function(d, i) {
+                        return "translate(" + (10+margin.left+((i%5)*chartwidth)) + "," + (margin.top+((Math.floor(i/5))*(chartheight+margin.top+50))) + ")";
+                    })
+                    .append("rect")
+                    .attr("y", function(d) { return y(d.regulate); })
+                    .attr("height", function(d,i) { return chartheight - y(d.regulate); })
+                    .attr("width",barWidth - 1)
+                    .attr("fill", "orange")
+                    .on("mouseover", function(d) {
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.text(d.regulate)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.style("opacity", 0);
+                    })
+
+        var bars2 = chart.selectAll(".bar")
+                    .append("rect")
+                    .attr("transform","translate("+barWidth+",0)")
+                    .attr("y", function(d) { return y(d.supportRPS); })
+                    .attr("height", function(d,i) { return chartheight - y(d.supportRPS); })
+                    .attr("width",barWidth - 1)
+                    .attr("fill", "green")
+                    .on("mouseover", function(d) {
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.text(d.supportRPS)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.style("opacity", 0);
+                    })
+
+        var bars3 = chart.selectAll(".bar")
+                    .append("rect")
+                    .attr("transform","translate("+2*barWidth+",0)")
+                    .attr("y", function(d) { return y(d.happening); })
+                    .attr("height", function(d,i) { return chartheight - y(d.happening); })
+                    .attr("width",barWidth - 1)
+                    .attr("fill", "red")
+                    .on("mouseover", function(d) {
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.text(d.happening)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.style("opacity", 0);
+                    })
+        var bars4 = chart.selectAll(".bar")
+                    .append("rect")
+                    .attr("transform","translate("+3*barWidth+",0)")
+                    .attr("y", function(d) { return y(d.human); })
+                    .attr("height", function(d,i) { return chartheight - y(d.human); })
+                    .attr("width",barWidth - 1)
+                    .attr("fill", "blue")
+                    .on("mouseover", function(d) {
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.text(d.human)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.style("opacity", 0);
+                    })
+        var bars5 = chart.selectAll(".bar")
+                    .append("rect")
+                    .attr("transform","translate("+4*barWidth+",0)")
+                    .attr("y", function(d) { return y(d.harmUS); })
+                    .attr("height", function(d,i) { return chartheight - y(d.harmUS); })
+                    .attr("width",barWidth - 1)
+                    .attr("fill", "yellow")
+                    .on("mouseover", function(d) {
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.text(d.harmUS)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.style("opacity", 0);
+                    })
+        var bars6 = chart.selectAll(".bar")
+                    .append("rect")
+                    .attr("transform","translate("+5*barWidth+",0)")
+                    .attr("y", function(d) { return y(d.consensus); })
+                    .attr("height", function(d,i) { return chartheight - y(d.consensus); })
+                    .attr("width",barWidth - 1)
+                    .attr("fill", "pink")
+                    .on("mouseover", function(d) {
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.text(d.consensus)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.style("opacity", 0);
+                    })
+        var bars7 = chart.selectAll(".bar")
+                    .append("rect")
+                    .attr("transform","translate("+6*barWidth+",0)")
+                    .attr("y", function(d) { return y(d.fundrenewables); })
+                    .attr("height", function(d,i) { return chartheight - y(d.fundrenewables); })
+                    .attr("width",barWidth - 1)
+                    .attr("fill", "gray")
+                    .on("mouseover", function(d) {
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.text(d.fundrenewables)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.style("opacity", 0);
+                    })
+        var bars8 = chart.selectAll(".bar")
+                    .append("rect")
+                    .attr("transform","translate("+7*barWidth+",0)")
+                    .attr("y", function(d) { return y(d.worried); })
+                    .attr("height", function(d,i) { return chartheight - y(d.worried); })
+                    .attr("width",barWidth - 1)
+                    .attr("fill", "purple")
+                    .on("mouseover", function(d) {
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.text(d.worried)
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", function (d) {
+                        tooltip.style("opacity", 0);
+                    })
+
+
+        // x-axis for chart 2
+        chart.selectAll(".bar").append("g")
+        .attr("transform", function(d, i) {
+            return "translate(0," + chartheight + ")";
+        })
+        .style("font-family","Raleway")
+        .style("font-size", "11px")
+        .call(d3.axisBottom(x))
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", "-.1em")
+        .attr("transform", "rotate(-65)");
+
+        // y-axis for chart 2
+        chart.selectAll(".bar").append("g")
+        .style("font-family","Raleway")
+        .style("font-size", "12px")
+        .call(d3.axisLeft(y));
+
+        // label
+        chart.selectAll(".bar").append("text")
+            .attr("x", (chartwidth-margin.left)/2)
+            .attr("y", 0)
+            .attr("text-anchor", "middle")
+            .style("font-size", "14px")
+            .style("font-family","Raleway")
+            .style("font-weight", 700)
+            .text(function(d) {return d.GeoName})
     }
 
 
