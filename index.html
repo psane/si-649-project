@@ -117,12 +117,28 @@
     window.colorscaleR=d3.scaleOrdinal().range(["#f699e7", "#E95900","#F6D903", "#BB7F0A"])
     window.colorscaleD=d3.scaleOrdinal().range(["#00BFFF", "#43AA8B","#B784E7", "#5F4BB6"])
 
+    // Calculate averages for Repub/Dem beliefs
+    var repub_belief_avgs = {};
+    var dem_belief_avgs = {};
+
+
 
     d3.json("assets/json/climate_data_long.json", function(error,data) {
-        // console.log(data)
+        //console.log(data)
+
         window.nested_data = d3.nest().key((d)=>d.Group).entries(data)
+        
         dem = nested_data[0].values
         rep = nested_data[1].values
+
+        // console.log(dem)
+        // console.log(rep)
+
+        for(var i = 0; i < 50; ++i) {
+        	//var renewable_mean 
+        	var dem_happening
+        }
+
         drawChart4(dem,colorscaleD)
         drawChart5(dem,colorscaleD)
     });
@@ -541,9 +557,20 @@
                     .style("font-family","Raleway")
                     .style("font-weight", 700)
 
+        // console.log(data)
+        var renewable_mean = d3.mean(data,function(d) { return d.happening})
+        // console.log(renewable_mean)
+
+        
+
+
         window.selected = d3.select("#select_list").property("value")
         // name = document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
         // title.text(name);
+
+        // console.log(data)
+        //var renewable_mean = d3.mean(data,function(d) { return d.fundrenewables})
+        // console.log(renewable_mean)
 
         x.domain(data.map((d) => d.GeoName))
         y.domain([0,100])
@@ -552,6 +579,17 @@
 
         var circle = chart.selectAll('circle.dot')
                         .data(data)
+
+        var dem_avg = chart.append("line")
+        					.attr("x1", 0)
+                        	.attr("x2", chartWidth)
+                        	.attr("y1", renewable_mean)
+                        	.attr("y2", renewable_mean)
+                        	.attr("transform", "translate(30)")
+                        	.style("stroke", "blue");
+                        	
+
+
 
         //exit
         circle.exit()
@@ -697,6 +735,16 @@
             .style("font-family","Raleway")
             .style("font-size", "11px")
             .call(d3.axisLeft(y))
+
+
+        // Dem Avg
+        // var line = d3.chart.line()
+        //     .x(function (d) {
+        //     	return x(getDate(d.time));
+        // 	})
+        //     .y(function (d) {
+        //     	return y(d.count);
+        // 	});
 
         //gridlines
         var gridlines = d3.axisTop()
