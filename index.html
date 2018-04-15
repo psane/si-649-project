@@ -613,7 +613,7 @@
 
         // #################### TEST CODE ########################
         // console.log(data)
-        var happening_mean = d3.mean(data,function(d) { return d.happening})
+        // var happening_mean = d3.mean(data,function(d) { return d.happening})
         // console.log(renewable_mean)
 
         // name = document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
@@ -637,13 +637,13 @@
         var circle = chart.selectAll('circle.dot')
                         .data(data)
 
-        var dem_avg = chart.append("line")
-        					.attr("x1", 0)
-                        	.attr("x2", chartWidth)
-                        	.attr("y1", happening_mean)
-                        	.attr("y2", happening_mean)
-                        	.attr("transform", "translate(30)")
-                        	.style("stroke", "blue");
+        // var dem_avg = chart.append("line")
+        // 					.attr("x1", 0)
+        //                 	.attr("x2", chartWidth)
+        //                 	.attr("y1", happening_mean)
+        //                 	.attr("y2", happening_mean)
+        //                 	.attr("transform", "translate(30)")
+        //                 	.style("stroke", "blue");
                         	
 
 
