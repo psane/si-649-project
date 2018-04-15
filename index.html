@@ -120,12 +120,82 @@
     window.colorscaleR=d3.scaleOrdinal().range(["#E91D0E","#f699e7","#F6D903", "#BB7F0A"])
     window.colorscaleD=d3.scaleOrdinal().range(["#00BFFF", "#43AA8B","#B784E7", "#5F4BB6"])
 
+    // Calculate averages for Repub/Dem beliefs
+    var rep_belief_avgs = {};
+    var dem_belief_avgs = {};
+
+
 
     d3.json("assets/json/climate_data_long.json", function(error,data) {
-        // console.log(data)
+        //console.log(data)
+
         window.nested_data = d3.nest().key((d)=>d.Group).entries(data)
+        
         dem = nested_data[0].values
         rep = nested_data[1].values
+
+        // console.log(dem)
+        // console.log(dem[0].happening)
+        // console.log(rep)
+
+        for(var j = 0; j < 2; ++j) {
+	        var avg_happening = 0;
+	        var avg_human = 0;
+	        var avg_harmUS = 0;
+	        var avg_regulate = 0;
+	        var avg_supportRPS = 0;
+	        var avg_fundrenew = 0;
+	        var avg_scientists = 0;
+	        var avg_worried = 0;
+
+	        // Calculate Dem Belief Avgs First
+	        if(j == 0) {
+		        for(var i = 0; i < 50; ++i) {
+		        	avg_happening += dem[i].happening;
+		        	avg_human += dem[i].human;
+		        	avg_harmUS += dem[i].harmUS;
+		        	avg_regulate += dem[i].regulate;
+		        	avg_supportRPS += dem[i].supportRPS;
+		        	avg_fundrenew += dem[i].fundrenewables;
+		        	avg_scientists += dem[i].consensus;
+		        	avg_worried += dem[i].worried;
+		        }
+		        dem_belief_avgs["happening"] = avg_happening / 50;
+		        dem_belief_avgs["human"] = avg_human / 50;
+		        dem_belief_avgs["harmUS"] = avg_harmUS / 50;
+		        dem_belief_avgs["regulate"] = avg_regulate / 50;
+		        dem_belief_avgs["supportRPS"] = avg_supportRPS / 50;
+		        dem_belief_avgs["fundrenewables"] = avg_fundrenew / 50;
+		        dem_belief_avgs["consensus"] = avg_scientists / 50;
+		        dem_belief_avgs["harmUS"] = avg_harmUS / 50;
+		    }
+		    // Then calculate Rep Belief Avgs
+		    else {
+		    	for(var i = 0; i < 50; ++i) {
+		        	avg_happening += rep[i].happening;
+		        	avg_human += rep[i].human;
+		        	avg_harmUS += rep[i].harmUS;
+		        	avg_regulate += rep[i].regulate;
+		        	avg_supportRPS += rep[i].supportRPS;
+		        	avg_fundrenew += rep[i].fundrenewables;
+		        	avg_scientists += rep[i].consensus;
+		        	avg_worried += rep[i].worried;
+		        }
+		        rep_belief_avgs["happening"] = avg_happening / 50;
+		        rep_belief_avgs["human"] = avg_human / 50;
+		        rep_belief_avgs["harmUS"] = avg_harmUS / 50;
+		        rep_belief_avgs["regulate"] = avg_regulate / 50;
+		        rep_belief_avgs["supportRPS"] = avg_supportRPS / 50;
+		        rep_belief_avgs["fundrenewables"] = avg_fundrenew / 50;
+		        rep_belief_avgs["consensus"] = avg_scientists / 50;
+		        rep_belief_avgs["harmUS"] = avg_harmUS / 50;
+		    }
+
+	    }
+
+        console.log(dem_belief_avgs)
+        console.log(rep_belief_avgs)
+
         drawChart4(dem,colorscaleD)
         drawChart5(dem,colorscaleD)
     });
@@ -586,6 +656,20 @@
         updateChart4(data,color)
     }
 
+
+    // #################### TEST CODE ########################
+        // console.log(data)
+        // var happening_mean = d3.mean(data,function(d) { return d.happening})
+        // console.log(renewable_mean)
+
+        // name = document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
+        // title.text(name);
+
+        // console.log(data)
+        //var renewable_mean = d3.mean(data,function(d) { return d.fundrenewables})
+        // console.log(renewable_mean)
+
+    // #######################################################
     function updateChart4(data,color) {
         window.selected = d3.select("#select_list").property("value")
 
@@ -598,6 +682,17 @@
 
         var circle = chart4.selectAll('circle.dot')
                         .data(data)
+
+        // var dem_avg = chart.append("line")
+        // 					.attr("x1", 0)
+        //                 	.attr("x2", chartWidth)
+        //                 	.attr("y1", happening_mean)
+        //                 	.attr("y2", happening_mean)
+        //                 	.attr("transform", "translate(30)")
+        //                 	.style("stroke", "blue");
+                        	
+
+
 
         //exit
         circle.exit()
@@ -731,7 +826,15 @@
             .attr("dx", "-.8em")
             .attr("dy", "-.1em")
             .attr("transform", "rotate(-65)");
-
+  
+        // Dem Avg
+        // var line = d3.chart.line()
+        //     .x(function (d) {
+        //     	return x(getDate(d.time));
+        // 	})
+        //     .y(function (d) {
+        //     	return y(d.count);
+        // 	});
         //gridlines
         grid.call(d3.axisTop()
                         .tickFormat("")
