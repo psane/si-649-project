@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>some title</title>
+    <title>Climate Change Opinions</title>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <!--optional color scales, you can specify your own color scale-->
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -27,69 +27,87 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1 class="lg-headline">High level insight</h1>
-                    <p class="lg-subtext">Here is some info about a really cool insight we found. Use our visualization to gain insights into how to better strategize your campaign.</p>
+                    <h1 class="lg-headline">Party affiliation matters.</h1>
+                    <p class="lg-subtext">On average, the lowest standing democratic groups rank 30% higher in all categories than all republican groups in the same categories within the same state.</p>
                 </div>
                 <div class="col-sm-6">
                     <div class="stat-container">
-                        <div class="stat-val">75%</div>
-                        <div class="stat-label">label</div>
+                        <div class="stat-val">30<span>%</span></div>
+                        <div class="stat-label">more democrats believe in the <br>effects of climate change</div>
                     </div>
                 </div>
 
             </div>
         </div>
-        <a href="#s-1" id="s0-next-btn" class="btn-next white" onclick="drawChart1()">next</a>
+        <!-- onclick="drawChart1()" -->
+        <a href="#s-1" id="s0-next-btn" class="btn-next white">next</a>
         <!-- <svg class="chart1"></svg> -->
     </section>
     <section id="s-1">
         <div class="row">
-            <h2>Does your audience Believe Global Warming is Happening?</h2>
+            <div class="col-sm-12">
+                <h2>Does your audience Believe Global Warming is Happening?</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <p>Let’s say you are have a Republican running for President, and they are about to go on a tour of the nation. They need to know a bit about the states they are visiting, and you need to curate their speeches in each state. Let’s look at who believes global warming is happening. You can see that most of the Republicans in each state are on the same page -- hovering around 50%. There are some outliers though, with New York, New Jersey, Hawaii, California, and Alaska sitting closer to 60%. Interestingly, 4 of these 5 states have a major industry of Healthcare and Social Assistance. Let’s explore this further.</p>
+                <p class="section-p">Let’s say you are have a Republican running for President, and they are about to go on a tour of the nation. They need to know a bit about the states they are visiting, and you need to curate their speeches in each state. Let’s look at who believes global warming is happening. You can see that most of the Republicans in each state are on the same page -- hovering around 50%. There are some outliers though, with New York, New Jersey, Hawaii, California, and Alaska sitting closer to 60%. Interestingly, 4 of these 5 states have a major industry of Healthcare and Social Assistance. Let’s explore this further.</p>
             </div>
             <div class="col-sm-9">
-                <svg class="chart1"></svg>
+                <h3>Republican belief that global warming is happening</h3>
+                <svg class="chart1 scale-down-90"></svg>
             </div>
         </div>
-        <a href="#s-2" id="s1-next-btn" class="btn-next" onclick="drawChart2()">next</a>
+        <!-- onclick="drawChart2()" -->
+        <a href="#s-2" id="s1-next-btn" class="btn-next">next</a>
     </section>
 
     <section id="s-2">
         <div class="row">
-            <h2>If they do, are they worried about it?</h2>
+            <div class="col-sm-12">
+                <h2>If they do, are they worried about it?</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <p>The five states we looked at earlier are also worried about global warming. Perhaps when your candidate visits this state, they should discuss how their policies will begin to reverse global warming. The remaining states did not have high percentages of people who believed that global warming is happening, and concordantly do not have high levels of worry. In these states, you might choose to emphasize other stances of the platform, rather than spending time discussing the action your candidate will take regarding policies surrounding global warming.</p>
+                <p class="section-p">The five states we looked at earlier are also worried about global warming. Perhaps when your candidate visits this state, they should discuss how their policies will begin to reverse global warming. The remaining states did not have high percentages of people who believed that global warming is happening, and concordantly do not have high levels of worry. In these states, you might choose to emphasize other stances of the platform, rather than spending time discussing the action your candidate will take regarding policies surrounding global warming.</p>
             </div>
-            <div class="col-sm-6">
-                <svg class="chart2"></svg>
+            <div class="col-sm-9">
+                <h3>Republican worried about global warming</h3>
+                <svg class="chart2 scale-down-90"></svg>
             </div>
         </div>
-        <a href="#s-3" id="s2-next-btn" class="btn-next" onclick="drawChart3()">next</a>
+        <!-- onclick="drawChart3()" -->
+        <a href="#s-3" id="s2-next-btn" class="btn-next" >next</a>
     </section>
 
     <section id="s-3">
         <div class="row">
-            <h2>What are their opinions about regulating CO2? Should you emphasize that in your speech?</h2>
+            <div class="col-sm-12">
+                <h2>What are their opinions about regulating CO2? Should you emphasize that in your speech?</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <p>New York and New Jersey are two states where the regulation of CO2 matters to them. In these states, it might be a good topic for the candidate to discuss in order to gain support and votes. Other states still have fairly high rates of support, but in New York and New Jersey, addressing this topic could make a more significant difference in the eventual election. </p>
+                <p class="section-p">New York and New Jersey are two states where the regulation of CO2 matters to them. In these states, it might be a good topic for the candidate to discuss in order to gain support and votes. Other states still have fairly high rates of support, but in New York and New Jersey, addressing this topic could make a more significant difference in the eventual election. </p>
             </div>
-            <div class="col-sm-6">
-                <svg class="chart3"></svg>
+            <div class="col-sm-9">
+                <h3>Republican support for regulating CO2 as a pollutant</h3>
+                <svg class="chart3 scale-down-90"></svg>
             </div>
         </div>
-        <a href="#s-4" id="s3-next-btn" class="btn-next" onclick="drawChart4()">next</a>
+        <!-- onclick="drawChart4()" -->
+        <a href="#s-4" id="s3-next-btn" class="btn-next" >next</a>
     </section>
 
     <section id="s-4">
         <div class="row">
-            <p>Explore on your own -- What issues is your candidate concerned with? Which states are you visiting?</p>
+            <div class="col-sm-12">
+                <h2>Explore on your own -- What issues is your candidate concerned with? Which states are you visiting?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <p></p>
             <div class="btn-group" role="group" id="buttons-2">
                 <button id="democrat-btn-2" class="btn active" onclick="showcontrols(this)">Democrats</button>
                 <button id="republican-btn-2" class="btn" onclick="showcontrols(this)">Republicans</button>
@@ -109,11 +127,21 @@
             </select>
             <div class="tooltip"></div>
         </div>
-        <svg class="chart4"></svg>
+        <div id="sort_controls">
+            <p class="textlabel">Choose how to sort the graph:</p>
+            <select id="sort_list" onchange="checkactive()">
+                <option value="alphabet">A-Z by State</option>
+                <option value="reverse">Z-A by State</option>
+                <option value="region">By Region</option>
+            </select>
+        </div>
+        <svg class="chart4 scale-down-80"></svg>
         <svg class="chart5"></svg>
     </section>
 
     <script>
+
+
     var margin = {top: 50 , right: 50, bottom: 100, left: 20}
     var t = d3.transition().duration(2000)
     var tooltip = d3.select(".tooltip")
@@ -124,6 +152,8 @@
     var rep_belief_avgs = {};
     var dem_belief_avgs = {};
 
+    var regions = {};
+    var regions_arr = [];
 
 
     d3.json("assets/json/climate_data_long.json", function(error,data) {
@@ -133,6 +163,10 @@
 
         dem = nested_data[0].values
         rep = nested_data[1].values
+
+        drawChart1()
+        drawChart2()
+        drawChart3()
 
         // console.log(dem)
         // console.log(dem[0].happening)
@@ -167,7 +201,7 @@
 		        dem_belief_avgs["supportRPS"] = avg_supportRPS / 50;
 		        dem_belief_avgs["fundrenewables"] = avg_fundrenew / 50;
 		        dem_belief_avgs["consensus"] = avg_scientists / 50;
-		        dem_belief_avgs["harmUS"] = avg_harmUS / 50;
+		        dem_belief_avgs["worried"] = avg_worried / 50;
 		    }
 		    // Then calculate Rep Belief Avgs
 		    else {
@@ -188,13 +222,25 @@
 		        rep_belief_avgs["supportRPS"] = avg_supportRPS / 50;
 		        rep_belief_avgs["fundrenewables"] = avg_fundrenew / 50;
 		        rep_belief_avgs["consensus"] = avg_scientists / 50;
-		        rep_belief_avgs["harmUS"] = avg_harmUS / 50;
+		        rep_belief_avgs["worried"] = avg_worried / 50;
 		    }
-
 	    }
 
-        console.log(dem_belief_avgs)
-        console.log(rep_belief_avgs)
+        for(var i = 0; i < 50; ++i){
+            if(regions[dem[i].Region]) {
+                regions[dem[i].Region].push(dem[i].GeoName);
+            }
+            else {
+                regions[dem[i].Region] = [dem[i].GeoName];
+            }
+        }
+
+        // console.log("regions:")
+        // console.log(regions)
+
+        // console.log(dem_belief_avgs)
+        // console.log(rep_belief_avgs)
+
 
         drawChart4(dem,colorscaleD)
         drawChart5(dem,colorscaleD)
@@ -260,7 +306,7 @@
                     .style("font-size", "24px")
                     .style("font-family","Raleway")
                     .style("font-weight", 700)
-                    .text("Republicans' belief that global warming is happening")
+                    // .text("Republicans' belief that global warming is happening")
 
         viz_data=nested_data[1].values
 
@@ -397,7 +443,7 @@
                     .style("font-size", "24px")
                     .style("font-family","Raleway")
                     .style("font-weight", 700)
-                    .text("Republicans worried about global warming")
+                    // .text("Republicans worried about global warming")
 
         viz_data=nested_data[1].values
 
@@ -534,7 +580,7 @@
                     .style("font-size", "24px")
                     .style("font-family","Raleway")
                     .style("font-weight", 700)
-                    .text("Republicans support for regulating CO2 as a pollutant")
+                    // .text("Republicans support for regulating CO2 as a pollutant")
 
         viz_data=nested_data[1].values
 
@@ -659,34 +705,52 @@
                     .style("font-size", "24px")
                     .style("font-family","Raleway")
                     .style("font-weight", 700)
-                    .text("Chart title")
+                    .text("Chart title");
 
         window.xaxis4 = chart4.append("g")
                     .attr("transform", "translate(30," + (height4+20) + ")")
                     .style("font-family","Raleway")
-                    .style("font-size", "11px")
+                    .style("font-size", "11px");
 
         window.yaxis4 = chart4.append("g")
             .attr("transform", "translate(30,20)")
             .style("font-family","Raleway")
-            .style("font-size", "11px")
+            .style("font-size", "11px");
 
+        // Adds starting belief variable(happening) average for Dem
+        window.dem_avg = chart4.append("g")
+                                .attr("id", "dem_avg")
+                                .attr("transform", "translate(30, 20)")
+                                .append("line")
+                                    .style("stroke", "blue")
+                                    .style("stroke-width", 3);
+        
+        // Adds happening average belief line for republicans
+        window.rep_avg = chart4.append("g")
+                                .attr("id", "rep_avg")
+                                .attr("transform", "translate(30, 20)")
+                                .append("line")
+                                    .style("stroke", "red")
+                                    .style("stroke-width", 3);
+
+        // Add grid lines
         window.grid = chart4.append("g")
                     .attr("class","dashed_grid")
-                    .attr("transform", "translate(30," + (height4+20) + ")")
+                    .attr("transform", "translate(30," + (height4+20) + ")");
 
+        // add LEGEND below
         window.legend4 = d3.select(".chart4")
                 .append("g")
                 .attr("transform","translate(" + (chartWidth4 + margin.left + margin.right) + ",0)")
                 .selectAll("g")
-                .data(color.domain())
+                .data(color.domain());
 
         legend4.enter().append('circle')
         .attr("class", "legend")
             .attr('cx', 10)
             .attr('cy', 12)
             .attr('r', 10)
-            .attr("transform", (d,i) => "translate(0," + 30*i + ")")
+            .attr("transform", (d,i) => "translate(0," + 30*i + ")");
             // .style("fill",color)
 
         legend4.enter().append('text')
@@ -694,28 +758,88 @@
             .attr('y', 16)
             .attr("class", "legendText")
             .attr("transform",(d,i) => "translate(0," + 30*i + ")")
-            .text((d) => d )
+            .text((d) => d );
+
+        legend4.enter().append('line')
+            .attr("x1", 0)
+            .attr("x2", 20)
+            .attr("y1", 130)
+            .attr("y2", 130)
+            .style("stroke", "blue")
+            .style("stroke-width", 3);
+
+        legend4.enter().append('text')
+            .attr('x', 25)
+            .attr('y', 133)
+            .attr("class", "legendText")
+            .text("Dem. Belief Avg");
+
+        legend4.enter().append('line')
+            .attr("x1", 0)
+            .attr("x2", 20)
+            .attr("y1", 150)
+            .attr("y2", 150)
+            .style("stroke", "red")
+            .style("stroke-width", 3);
+
+        legend4.enter().append('text')
+            .attr('x', 25)
+            .attr('y', 155)
+            .attr("class", "legendText")
+            .text("Repub. Belief Avg");
+
+        // Update the chart
         updateChart4(data,color)
     }
 
+    function sortxaxis(sort_data, sort_option){
+        console.log(sort_option);
 
-    // #################### TEST CODE ########################
-        // console.log(data)
-        // var happening_mean = d3.mean(data,function(d) { return d.happening})
-        // console.log(renewable_mean)
+        for(var key in regions){
+            // console.log(key)
+            // console.log(regions[key].length)
+            for(var i = 0; i < regions[key].length; ++i){
+                regions_arr.push(regions[key][i])
+            }
+        }
 
-        // name = document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
-        // title.text(name);
+        switch(sort_option) {
+            case "alphabet": 
+                sort_data.sort(function(x, y){
+                   return d3.ascending(x.GeoName, y.GeoName);
+                })
+                // console.log("Alphabet Alphabet");
+                // console.log(sort_data)
+                break;
+            case "reverse":
+                sort_data.sort(function(x, y){
+                   return d3.descending(x.GeoName, y.GeoName);
+                })
+                break;
+            case "region":
+                sort_data.sort(function(a, b){
+                   return regions_arr.indexOf(a.GeoName) - regions_arr.indexOf(b.GeoName)
+                })
+                // console.log("Region Region")
+                // console.log(sort_data)
+                break;
+        }
 
-        // console.log(data)
-        //var renewable_mean = d3.mean(data,function(d) { return d.fundrenewables})
-        // console.log(renewable_mean)
+        return sort_data;
+    }
 
-    // #######################################################
     function updateChart4(data,color) {
         window.selected = d3.select("#select_list").property("value")
+<<<<<<< HEAD
         name = document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
         title.text(name);
+=======
+        window.sort_selected = d3.select("#sort_list").property("value")
+
+
+        data = sortxaxis(data, sort_selected)
+        console.log(data)
+>>>>>>> 1e0b910b3e549c6fc946e3d419be064472f8b154
 
         x4.domain(data.map((d) => d.GeoName))
 
@@ -727,16 +851,19 @@
         var circle = chart4.selectAll('circle.dot')
                         .data(data)
 
-        // var dem_avg = chart.append("line")
-        // 					.attr("x1", 0)
-        //                 	.attr("x2", chartWidth)
-        //                 	.attr("y1", happening_mean)
-        //                 	.attr("y2", happening_mean)
-        //                 	.attr("transform", "translate(30)")
-        //                 	.style("stroke", "blue");
+        var dem_line = d3.select("#dem_avg").selectAll("line");
+        var rep_line = d3.select("#rep_avg").selectAll("line");     
 
+        // LINE - Update
+        dem_line.attr("x1", 0)
+                    .attr("x2", chartWidth4)
+                    .attr("y1", y4(dem_belief_avgs[selected]))
+                    .attr("y2", y4(dem_belief_avgs[selected]));
 
-
+        rep_line.attr("x1", 0)
+                    .attr("x2", chartWidth4)
+                    .attr("y1", y4(rep_belief_avgs[selected]))
+                    .attr("y2", y4(rep_belief_avgs[selected]));
 
         //exit
         circle.exit()
@@ -774,7 +901,7 @@
                 }
             })
             .attr('r', (d) => sizeScale4(d.Electoral_Votes))
-            .attr("fill", (d) => color(d.Industry))
+            .attr("fill", (d) => color(d.Industry));
 
         //enter
         circle.enter().append("circle")
@@ -810,9 +937,9 @@
             .attr('r',0)
             .transition()
             .attr('r', (d) => sizeScale4(d.Electoral_Votes))
-            .attr("fill", (d) => color(d.Industry))
+            .attr("fill", (d) => color(d.Industry));
 
-        //enter & update
+        //enter & update for Tooltip
         chart4.selectAll("circle.dot")
                     .on("mouseover", function(d) {
                         tooltip.transition()
@@ -861,7 +988,7 @@
                         tooltip.append("tspan").attr("class","label").text("State: " + d.GeoName)
                         tooltip.append("tspan").attr("class","label").text("Industry: " + d.Industry)
                     })
-                    .on("mouseout", (d) => tooltip.transition().style("opacity", 0))
+                    .on("mouseout", (d) => tooltip.transition().style("opacity", 0));
 
         // x-axis
         xaxis4.call(d3.axisBottom(x4))
@@ -871,14 +998,6 @@
             .attr("dy", "-.1em")
             .attr("transform", "rotate(-65)");
 
-        // Dem Avg
-        // var line = d3.chart.line()
-        //     .x(function (d) {
-        //     	return x(getDate(d.time));
-        // 	})
-        //     .y(function (d) {
-        //     	return y(d.count);
-        // 	});
         //gridlines
         grid.call(d3.axisTop()
                         .tickFormat("")
@@ -886,7 +1005,7 @@
                         .scale(x4))
 
         //legend
-        d3.selectAll("circle.legend").style('fill', color)
+        d3.selectAll("circle.legend").style('fill', color);
     }
 
     function drawChart5(data,color) {
@@ -901,7 +1020,7 @@
         window.chart5 = d3.select(".chart5")
                     .attr("width", width5)
                     .attr("height", height5 + margin.top + margin.bottom)
-                    .append("g")
+                    .append("g");
 
         chart5.append("text")
             .attr("x", width5/2)
@@ -1192,8 +1311,6 @@
         //         tooltip.style("opacity", 0);
         //     })
     }
-
-
 
     // UI STUFF
 
