@@ -122,8 +122,15 @@
             </select>
             <div class="tooltip"></div>
         </div>
+        <div id="sort_controls">
+            <p class="textlabel">Choose how to sort the Graph:</p>
+            <select id="sort_list" onchange="checkactive()">
+                <option value="alphabet">Alphabetical</option>
+                <option value="region">By Region</option>
+            </select>
+        </div>
         <svg class="chart4 scale-down-80"></svg>
-        <svg class="chart5 scale-down-80"></svg>
+        <svg class="chart5"></svg>
     </section>
 
     <script>
@@ -139,8 +146,7 @@
     var rep_belief_avgs = {};
     var dem_belief_avgs = {};
 
-    var regions;
-
+    var regions = {};
 
 
     d3.json("assets/json/climate_data_long.json", function(error,data) {
@@ -211,11 +217,22 @@
 		        rep_belief_avgs["consensus"] = avg_scientists / 50;
 		        rep_belief_avgs["worried"] = avg_worried / 50;
 		    }
-
 	    }
 
-        console.log(dem_belief_avgs)
-        console.log(rep_belief_avgs)
+        for(var i = 0; i < 50; ++i){
+            if(regions[dem[i].Region]) {
+                regions[dem[i].Region].push(dem[i].GeoName);
+            }
+            else {
+                regions[dem[i].Region] = [dem[i].GeoName];
+            }
+        }
+
+        console.log("regions:")
+        console.log(regions)
+
+        // console.log(dem_belief_avgs)
+        // console.log(rep_belief_avgs)
 
         drawChart4(dem,colorscaleD)
         drawChart5(dem,colorscaleD)
@@ -657,9 +674,7 @@
                                 .append("line")
                                     .style("stroke", "blue")
                                     .style("stroke-width", 3);
-                                    
-                                    
-
+        
         // Adds happening average belief line for republicans
         window.rep_avg = chart4.append("g")
                                 .attr("id", "rep_avg")
@@ -668,11 +683,12 @@
                                     .style("stroke", "red")
                                     .style("stroke-width", 3);
 
-        // Adds grid lines
+        // Add grid lines
         window.grid = chart4.append("g")
                     .attr("class","dashed_grid")
                     .attr("transform", "translate(30," + (height4+20) + ")");
 
+        // add LEGEND below
         window.legend4 = d3.select(".chart4")
                 .append("g")
                 .attr("transform","translate(" + (chartWidth4 + margin.left + margin.right) + ",0)")
@@ -722,26 +738,13 @@
             .attr("class", "legendText")
             .text("Repub. Belief Avg");
 
-
+        // Update the chart
         updateChart4(data,color)
     }
 
-
-    // #################### TEST CODE ########################
-        // console.log(data)
-        // var happening_mean = d3.mean(data,function(d) { return d.happening})
-        // console.log(renewable_mean)
-
-        // name = document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
-        // title.text(name);
-
-        // console.log(data)
-        //var renewable_mean = d3.mean(data,function(d) { return d.fundrenewables})
-        // console.log(renewable_mean)
-
-    // #######################################################
     function updateChart4(data,color) {
         window.selected = d3.select("#select_list").property("value")
+
 
         x4.domain(data.map((d) => d.GeoName))
 
@@ -912,7 +915,7 @@
         grid.call(d3.axisTop()
                         .tickFormat("")
                         .tickSize(height4)
-                        .scale(x4));
+                        .scale(x4))
 
         //legend
         d3.selectAll("circle.legend").style('fill', color);

@@ -55,11 +55,15 @@ body {
     box-shadow: 2px 4px #999;
 }
 
-.textlabel, .select_list, .select_button {
+.textlabel, .select_list, .select_button, .sort_list {
     display: inline;
 }
 
 #controls {
+    margin-left: 35px;
+}
+
+#sort_controls {
     margin-left: 35px;
 }
 
