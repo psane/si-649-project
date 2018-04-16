@@ -123,9 +123,10 @@
             <div class="tooltip"></div>
         </div>
         <div id="sort_controls">
-            <p class="textlabel">Choose how to sort the Graph:</p>
+            <p class="textlabel">Choose how to sort the graph:</p>
             <select id="sort_list" onchange="checkactive()">
-                <option value="alphabet">Alphabetical</option>
+                <option value="alphabet">A-Z by State</option>
+                <option value="reverse">Z-A by State</option>
                 <option value="region">By Region</option>
             </select>
         </div>
@@ -229,8 +230,8 @@
             }
         }
 
-        console.log("regions:")
-        console.log(regions)
+        // console.log("regions:")
+        // console.log(regions)
 
         // console.log(dem_belief_avgs)
         // console.log(rep_belief_avgs)
@@ -744,7 +745,7 @@
     }
 
     function sortxaxis(sort_data, sort_option){
-        // console.log(sort_data)
+        console.log(sort_option);
 
         for(var key in regions){
             // console.log(key)
@@ -752,24 +753,27 @@
             for(var i = 0; i < regions[key].length; ++i){
                 regions_arr.push(regions[key][i])
             }
-            // console.log(regions_arr)
         }
 
         switch(sort_option) {
             case "alphabet": 
                 sort_data.sort(function(x, y){
                    return d3.ascending(x.GeoName, y.GeoName);
-                   return regions_arr.indexOf(a.GeoName) - regions_arr.indexOf(b.Geoname)
                 })
-                console.log("Alphabet Alphabet");
-                console.log(sort_data)
+                // console.log("Alphabet Alphabet");
+                // console.log(sort_data)
+                break;
+            case "reverse":
+                sort_data.sort(function(x, y){
+                   return d3.descending(x.GeoName, y.GeoName);
+                })
                 break;
             case "region":
                 sort_data.sort(function(a, b){
                    return regions_arr.indexOf(a.GeoName) - regions_arr.indexOf(b.GeoName)
                 })
-                console.log("Region Region")
-                console.log(sort_data)
+                // console.log("Region Region")
+                // console.log(sort_data)
                 break;
         }
 
@@ -780,10 +784,6 @@
         window.selected = d3.select("#select_list").property("value")
         window.sort_selected = d3.select("#sort_list").property("value")
 
-        console.log(sort_selected)
-
-        // console.log("data(look at d.GeoName):")
-        // console.log(data)
 
         data = sortxaxis(data, sort_selected)
         console.log(data)
