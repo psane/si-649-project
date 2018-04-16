@@ -695,6 +695,20 @@
         window.chart4 = d3.select(".chart4")
                     .attr("width", width4)
                     .attr("height", height4 + margin.top + margin.bottom)
+                    // .attr("transform", "translate(20,0)")
+
+        chart4.append("text")
+                .attr("transform", "translate(" + (chartWidth4/2) + " ," + (height4 + margin.top + 50) + ")")
+                .style("text-anchor", "middle")
+                .text("States");
+
+        chart4.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -15)
+        .attr("x",0 - (height4 / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Percentage Beliefs");
 
         window.title = chart4.append("g")
                     .append("text")
@@ -724,7 +738,7 @@
                                 .append("line")
                                     .style("stroke", "blue")
                                     .style("stroke-width", 3);
-        
+
         // Adds happening average belief line for republicans
         window.rep_avg = chart4.append("g")
                                 .attr("id", "rep_avg")
@@ -804,7 +818,7 @@
         }
 
         switch(sort_option) {
-            case "alphabet": 
+            case "alphabet":
                 sort_data.sort(function(x, y){
                    return d3.ascending(x.GeoName, y.GeoName);
                 })
@@ -830,16 +844,13 @@
 
     function updateChart4(data,color) {
         window.selected = d3.select("#select_list").property("value")
-<<<<<<< HEAD
         name = document.getElementById('select_list').options[document.getElementById('select_list').selectedIndex].text
         title.text(name);
-=======
         window.sort_selected = d3.select("#sort_list").property("value")
 
 
         data = sortxaxis(data, sort_selected)
         console.log(data)
->>>>>>> 1e0b910b3e549c6fc946e3d419be064472f8b154
 
         x4.domain(data.map((d) => d.GeoName))
 
@@ -852,7 +863,7 @@
                         .data(data)
 
         var dem_line = d3.select("#dem_avg").selectAll("line");
-        var rep_line = d3.select("#rep_avg").selectAll("line");     
+        var rep_line = d3.select("#rep_avg").selectAll("line");
 
         // LINE - Update
         dem_line.attr("x1", 0)
