@@ -164,7 +164,7 @@
 		        dem_belief_avgs["supportRPS"] = avg_supportRPS / 50;
 		        dem_belief_avgs["fundrenewables"] = avg_fundrenew / 50;
 		        dem_belief_avgs["consensus"] = avg_scientists / 50;
-		        dem_belief_avgs["harmUS"] = avg_harmUS / 50;
+		        dem_belief_avgs["worried"] = avg_worried / 50;
 		    }
 		    // Then calculate Rep Belief Avgs
 		    else {
@@ -185,13 +185,15 @@
 		        rep_belief_avgs["supportRPS"] = avg_supportRPS / 50;
 		        rep_belief_avgs["fundrenewables"] = avg_fundrenew / 50;
 		        rep_belief_avgs["consensus"] = avg_scientists / 50;
-		        rep_belief_avgs["harmUS"] = avg_harmUS / 50;
+		        rep_belief_avgs["worried"] = avg_worried / 50;
 		    }
 
 	    }
 
         console.log(dem_belief_avgs)
         console.log(rep_belief_avgs)
+
+        console.log(rep_belief_avgs["happening"])
 
         drawChart4(dem,colorscaleD)
         drawChart5(dem,colorscaleD)
@@ -626,9 +628,33 @@
             .style("font-family","Raleway")
             .style("font-size", "11px")
 
+        // Adds starting belief variable(happening) average for Dem
+        window.dem_avg = chart4.append("g")
+        						.attr("id", "dem_avg")
+        						.attr("transform", "translate(30, 20)")
+        						.append("line")
+	        						.style("stroke", "blue")
+			                       	.style("stroke-width", 3);
+				        			// .attr("x1", 0)
+				           //        .attr("x2", chartWidth4)
+				           //        .attr("y1", y4(dem_belief_avgs["happening"]))
+				           //        .attr("y2", y4(dem_belief_avgs["happening"]))
+			                       	
+			                       	
+
+		// Adds happening average belief line for republicans
+		window.rep_avg = chart4.append("g")
+								.attr("id", "rep_avg")
+								.attr("transform", "translate(30, 20)")
+								.append("line")
+									.style("stroke", "red")
+		                       		.style("stroke-width", 3);
+		                       	
+
         window.grid = chart4.append("g")
                     .attr("class","dashed_grid")
-                    .attr("transform", "translate(30," + (height4+20) + ")")
+                    .attr("transform", "translate(30," + (height4+20) + ")");
+
 
         window.legend4 = d3.select(".chart4")
                 .append("g")
@@ -650,7 +676,8 @@
             .attr("class", "legendText")
             .attr("transform",(d,i) => "translate(0," + 30*i + ")")
             .text((d) => d )
-        updateChart4(data,color)
+
+        updateChart4(data,color, dem_avg)
     }
 
 
@@ -666,37 +693,55 @@
         //var renewable_mean = d3.mean(data,function(d) { return d.fundrenewables})
         // console.log(renewable_mean)
 
+
+        // var dem_avg = chart.append("line")
+        					// .attr("x1", 0)
+             //            	.attr("x2", chartWidth)
+             //            	.attr("y1", happening_mean)
+             //            	.attr("y2", happening_mean)
+             //            	.attr("transform", "translate(30)")
+             //            	.style("stroke", "blue");
+                        	
+
+
     // #######################################################
-    function updateChart4(data,color) {
+
+    function updateChart4(data,color, dem_avg) {
         window.selected = d3.select("#select_list").property("value")
 
+        // This will be where I need to update x-axis domain
         x4.domain(data.map((d) => d.GeoName))
 
         yaxis4.call(d3.axisLeft(y4))
 
+        // Scales size of circle nodes based on electoral votes and colors them according to industry
         sizeScale4.domain([0,d3.max(data, (d) => d.Electoral_Votes)])
         color.domain(["Manufacturing", "Health care" , "Retail trade", "Accommodation"])
 
         var circle = chart4.selectAll('circle.dot')
-                        .data(data)
-
-        // var dem_avg = chart.append("line")
-        // 					.attr("x1", 0)
-        //                 	.attr("x2", chartWidth)
-        //                 	.attr("y1", happening_mean)
-        //                 	.attr("y2", happening_mean)
-        //                 	.attr("transform", "translate(30)")
-        //                 	.style("stroke", "blue");
-                        	
+                        .data(data);
 
 
+        var dem_line = d3.select("#dem_avg").selectAll("line");
+        var rep_line = d3.select("#rep_avg").selectAll("line");		
+
+	    // LINE - Update
+	    dem_line.attr("x1", 0)
+	              	.attr("x2", chartWidth4)
+	              	.attr("y1", y4(dem_belief_avgs[selected]))
+	              	.attr("y2", y4(dem_belief_avgs[selected]));
+
+	    rep_line.attr("x1", 0)
+	              	.attr("x2", chartWidth4)
+	              	.attr("y1", y4(rep_belief_avgs[selected]))
+	              	.attr("y2", y4(rep_belief_avgs[selected]));
 
         //exit
         circle.exit()
             .transition()
             .attr('cx',0)
             .attr('cy',0)
-            .remove()
+            .remove();
 
         //update
         circle.attr("r",0).transition()
@@ -824,14 +869,8 @@
             .attr("dy", "-.1em")
             .attr("transform", "rotate(-65)");
   
-        // Dem Avg
-        // var line = d3.chart.line()
-        //     .x(function (d) {
-        //     	return x(getDate(d.time));
-        // 	})
-        //     .y(function (d) {
-        //     	return y(d.count);
-        // 	});
+        
+
         //gridlines
         grid.call(d3.axisTop()
                         .tickFormat("")
