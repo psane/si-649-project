@@ -61,10 +61,12 @@ body {
 
 #controls {
     margin-left: 35px;
+    margin-bottom: 25px;
 }
 
 #sort_controls {
     margin-left: 35px;
+    margin-bottom: 25px;
 }
 
 div.tooltip {
