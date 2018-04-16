@@ -211,8 +211,40 @@ section {
     font-size: 64px;
     font-weight: 400;
 }
+.stat-val span{
+    
+    display: inline-block;
+    font-size: 32px;
+    vertical-align: top;
+    padding-top: 5px;
+    transform: translateY(15px);
+    
+}
 .stat-label {
     color: #BDBDBD;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 200;
+}
+
+.scale-down-80 {
+    transform: scale(0.8);
+}
+
+.scale-down-90 {
+    transform: scale(0.9);
+}
+
+.section-p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #9E9E9E;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+h3 {
+    font-size: 20px;
+    text-align: left;
+    padding-left: 150px;
 }

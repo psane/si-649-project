@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>some title</title>
+    <title>Climate Change Opinions</title>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <!--optional color scales, you can specify your own color scale-->
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -24,64 +24,77 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1 class="lg-headline">High level insight</h1>
-                    <p class="lg-subtext">Here is some info about a really cool insight we found. Use our visualization to gain insights into how to better strategize your campaign.</p>
+                    <h1 class="lg-headline">Party affiliation matters.</h1>
+                    <p class="lg-subtext">On average, the lowest standing democratic groups rank 30% higher in all categories than all republican groups in the same categories within the same state.</p>
                 </div>
                 <div class="col-sm-6">
                     <div class="stat-container">
-                        <div class="stat-val">75%</div>
-                        <div class="stat-label">label</div>
+                        <div class="stat-val">30<span>%</span></div>
+                        <div class="stat-label">more democrats believe in the <br>effects of climate change</div>
                     </div>
                 </div>
 
             </div>
         </div>
-        <a href="#s-1" id="s0-next-btn" class="btn-next white" onclick="drawChart1()">next</a>
+        <!-- onclick="drawChart1()" -->
+        <a href="#s-1" id="s0-next-btn" class="btn-next white">next</a>
         <!-- <svg class="chart1"></svg> -->
     </section>
     <section id="s-1">
         <div class="row">
-            <h2>Does your audience Believe Global Warming is Happening?</h2>
+            <div class="col-sm-12">
+                <h2>Does your audience Believe Global Warming is Happening?</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <p>Let’s say you are have a Republican running for President, and they are about to go on a tour of the nation. They need to know a bit about the states they are visiting, and you need to curate their speeches in each state. Let’s look at who believes global warming is happening. You can see that most of the Republicans in each state are on the same page -- hovering around 50%. There are some outliers though, with New York, New Jersey, Hawaii, California, and Alaska sitting closer to 60%. Interestingly, 4 of these 5 states have a major industry of Healthcare and Social Assistance. Let’s explore this further.</p>
+                <p class="section-p">Let’s say you are have a Republican running for President, and they are about to go on a tour of the nation. They need to know a bit about the states they are visiting, and you need to curate their speeches in each state. Let’s look at who believes global warming is happening. You can see that most of the Republicans in each state are on the same page -- hovering around 50%. There are some outliers though, with New York, New Jersey, Hawaii, California, and Alaska sitting closer to 60%. Interestingly, 4 of these 5 states have a major industry of Healthcare and Social Assistance. Let’s explore this further.</p>
             </div>
             <div class="col-sm-9">
-                <svg class="chart1"></svg>
+                <h3>Republican belief that global warming is happening</h3>
+                <svg class="chart1 scale-down-90"></svg>
             </div>
         </div>
-        <a href="#s-2" id="s1-next-btn" class="btn-next" onclick="drawChart2()">next</a>
+        <!-- onclick="drawChart2()" -->
+        <a href="#s-2" id="s1-next-btn" class="btn-next">next</a>
     </section>
 
     <section id="s-2">
         <div class="row">
-            <h2>If they do, are they worried about it?</h2>
+            <div class="col-sm-12">
+                <h2>If they do, are they worried about it?</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <p>The five states we looked at earlier are also worried about global warming. Perhaps when your candidate visits this state, they should discuss how their policies will begin to reverse global warming. The remaining states did not have high percentages of people who believed that global warming is happening, and concordantly do not have high levels of worry. In these states, you might choose to emphasize other stances of the platform, rather than spending time discussing the action your candidate will take regarding policies surrounding global warming.</p>
+                <p class="section-p">The five states we looked at earlier are also worried about global warming. Perhaps when your candidate visits this state, they should discuss how their policies will begin to reverse global warming. The remaining states did not have high percentages of people who believed that global warming is happening, and concordantly do not have high levels of worry. In these states, you might choose to emphasize other stances of the platform, rather than spending time discussing the action your candidate will take regarding policies surrounding global warming.</p>
             </div>
-            <div class="col-sm-6">
-                <svg class="chart2"></svg>
+            <div class="col-sm-9">
+                <h3>Republican worried about global warming</h3>
+                <svg class="chart2 scale-down-90"></svg>
             </div>
         </div>
-        <a href="#s-3" id="s2-next-btn" class="btn-next" onclick="drawChart3()">next</a>
+        <!-- onclick="drawChart3()" -->
+        <a href="#s-3" id="s2-next-btn" class="btn-next" >next</a>
     </section>
 
     <section id="s-3">
         <div class="row">
-            <h2>What are their opinions about regulating CO2? Should you emphasize that in your speech?</h2>
+            <div class="col-sm-12">
+                <h2>What are their opinions about regulating CO2? Should you emphasize that in your speech?</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-sm-3">
-                <p>New York and New Jersey are two states where the regulation of CO2 matters to them. In these states, it might be a good topic for the candidate to discuss in order to gain support and votes. Other states still have fairly high rates of support, but in New York and New Jersey, addressing this topic could make a more significant difference in the eventual election. </p>
+                <p class="section-p">New York and New Jersey are two states where the regulation of CO2 matters to them. In these states, it might be a good topic for the candidate to discuss in order to gain support and votes. Other states still have fairly high rates of support, but in New York and New Jersey, addressing this topic could make a more significant difference in the eventual election. </p>
             </div>
-            <div class="col-sm-6">
-                <svg class="chart3"></svg>
+            <div class="col-sm-9">
+                <h3>Republican support for regulating CO2 as a pollutant</h3>
+                <svg class="chart3 scale-down-90"></svg>
             </div>
         </div>
-        <a href="#s-4" id="s3-next-btn" class="btn-next" onclick="drawChart4()">next</a>
+        <!-- onclick="drawChart4()" -->
+        <a href="#s-4" id="s3-next-btn" class="btn-next" >next</a>
     </section>
 
     <section id="s-4">
@@ -106,11 +119,13 @@
             </select>
             <div class="tooltip"></div>
         </div>
-        <svg class="chart4"></svg>
-        <svg class="chart5"></svg>
+        <svg class="chart4 scale-down-80"></svg>
+        <svg class="chart5 scale-down-80"></svg>
     </section>
 
     <script>
+
+
     var margin = {top: 50 , right: 50, bottom: 100, left: 20}
     var t = d3.transition().duration(3000)
     var tooltip = d3.select(".tooltip")
@@ -123,6 +138,9 @@
         window.nested_data = d3.nest().key((d)=>d.Group).entries(data)
         dem = nested_data[0].values
         rep = nested_data[1].values
+        drawChart1()
+        drawChart2()
+        drawChart3()
         drawChart4(dem,colorscaleD)
         drawChart5(dem,colorscaleD)
     });
@@ -926,8 +944,6 @@
             .style("font-weight", 700)
             .text(function(d) {return d.GeoName})
     }
-
-
 
     // UI STUFF
 
