@@ -167,7 +167,7 @@
 		        dem_belief_avgs["supportRPS"] = avg_supportRPS / 50;
 		        dem_belief_avgs["fundrenewables"] = avg_fundrenew / 50;
 		        dem_belief_avgs["consensus"] = avg_scientists / 50;
-		        dem_belief_avgs["harmUS"] = avg_harmUS / 50;
+		        dem_belief_avgs["worried"] = avg_worried / 50;
 		    }
 		    // Then calculate Rep Belief Avgs
 		    else {
@@ -188,7 +188,7 @@
 		        rep_belief_avgs["supportRPS"] = avg_supportRPS / 50;
 		        rep_belief_avgs["fundrenewables"] = avg_fundrenew / 50;
 		        rep_belief_avgs["consensus"] = avg_scientists / 50;
-		        rep_belief_avgs["harmUS"] = avg_harmUS / 50;
+		        rep_belief_avgs["worried"] = avg_worried / 50;
 		    }
 
 	    }
@@ -627,7 +627,25 @@
         window.yaxis4 = chart4.append("g")
             .attr("transform", "translate(30,20)")
             .style("font-family","Raleway")
-            .style("font-size", "11px")
+            .style("font-size", "11px");
+
+        // Adds starting belief variable(happening) average for Dem
+        window.dem_avg = chart4.append("g")
+                                .attr("id", "dem_avg")
+                                .attr("transform", "translate(30, 20)")
+                                .append("line")
+                                    .style("stroke", "blue")
+                                    .style("stroke-width", 3);
+                                    
+                                    
+
+        // Adds happening average belief line for republicans
+        window.rep_avg = chart4.append("g")
+                                .attr("id", "rep_avg")
+                                .attr("transform", "translate(30, 20)")
+                                .append("line")
+                                    .style("stroke", "red")
+                                    .style("stroke-width", 3);
 
         window.grid = chart4.append("g")
                     .attr("class","dashed_grid")
@@ -653,6 +671,7 @@
             .attr("class", "legendText")
             .attr("transform",(d,i) => "translate(0," + 30*i + ")")
             .text((d) => d )
+
         updateChart4(data,color)
     }
 
@@ -683,16 +702,19 @@
         var circle = chart4.selectAll('circle.dot')
                         .data(data)
 
-        // var dem_avg = chart.append("line")
-        // 					.attr("x1", 0)
-        //                 	.attr("x2", chartWidth)
-        //                 	.attr("y1", happening_mean)
-        //                 	.attr("y2", happening_mean)
-        //                 	.attr("transform", "translate(30)")
-        //                 	.style("stroke", "blue");
+        var dem_line = d3.select("#dem_avg").selectAll("line");
+        var rep_line = d3.select("#rep_avg").selectAll("line");     
 
+        // LINE - Update
+        dem_line.attr("x1", 0)
+                    .attr("x2", chartWidth4)
+                    .attr("y1", y4(dem_belief_avgs[selected]))
+                    .attr("y2", y4(dem_belief_avgs[selected]));
 
-
+        rep_line.attr("x1", 0)
+                    .attr("x2", chartWidth4)
+                    .attr("y1", y4(rep_belief_avgs[selected]))
+                    .attr("y2", y4(rep_belief_avgs[selected]));
 
         //exit
         circle.exit()
