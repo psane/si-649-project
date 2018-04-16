@@ -124,6 +124,8 @@
     var rep_belief_avgs = {};
     var dem_belief_avgs = {};
 
+    var regions;
+
 
 
     d3.json("assets/json/climate_data_long.json", function(error,data) {
@@ -647,6 +649,7 @@
                                     .style("stroke", "red")
                                     .style("stroke-width", 3);
 
+        // Adds grid lines
         window.grid = chart4.append("g")
                     .attr("class","dashed_grid")
                     .attr("transform", "translate(30," + (height4+20) + ")")
@@ -671,6 +674,35 @@
             .attr("class", "legendText")
             .attr("transform",(d,i) => "translate(0," + 30*i + ")")
             .text((d) => d )
+
+        legend4.enter().append('line')
+            .attr("x1", 0)
+            .attr("x2", 20)
+            .attr("y1", 130)
+            .attr("y2", 130)
+            .style("stroke", "blue")
+            .style("stroke-width", 3);
+
+        legend4.enter().append('text')
+            .attr('x', 25)
+            .attr('y', 133)
+            .attr("class", "legendText")
+            .text("Dem. Belief Avg");
+
+        legend4.enter().append('line')
+            .attr("x1", 0)
+            .attr("x2", 20)
+            .attr("y1", 150)
+            .attr("y2", 150)
+            .style("stroke", "red")
+            .style("stroke-width", 3);
+
+        legend4.enter().append('text')
+            .attr('x', 25)
+            .attr('y', 155)
+            .attr("class", "legendText")
+            .text("Repub. Belief Avg");
+
 
         updateChart4(data,color)
     }
