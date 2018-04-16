@@ -218,18 +218,18 @@ section {
     font-weight: 400;
 }
 .stat-val span{
-    
+
     display: inline-block;
     font-size: 32px;
     vertical-align: top;
     padding-top: 5px;
     transform: translateY(15px);
-    
+
 }
 .stat-label {
-    color: #BDBDBD;
+    color: #4D4D4D;
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 .scale-down-80 {
