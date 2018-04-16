@@ -147,6 +147,7 @@
     var dem_belief_avgs = {};
 
     var regions = {};
+    var regions_arr = [];
 
 
     d3.json("assets/json/climate_data_long.json", function(error,data) {
@@ -742,11 +743,51 @@
         updateChart4(data,color)
     }
 
+    function sortxaxis(sort_data, sort_option){
+        // console.log(sort_data)
+
+        for(var key in regions){
+            // console.log(key)
+            // console.log(regions[key].length)
+            for(var i = 0; i < regions[key].length; ++i){
+                regions_arr.push(regions[key][i])
+            }
+            // console.log(regions_arr)
+        }
+
+        switch(sort_option) {
+            case "alphabet": 
+                sort_data.sort(function(x, y){
+                   return d3.ascending(x.GeoName, y.GeoName);
+                   return regions_arr.indexOf(a.GeoName) - regions_arr.indexOf(b.Geoname)
+                })
+                console.log("Alphabet Alphabet");
+                console.log(sort_data)
+                break;
+            case "region":
+                sort_data.sort(function(a, b){
+                   return regions_arr.indexOf(a.GeoName) - regions_arr.indexOf(b.GeoName)
+                })
+                console.log("Region Region")
+                console.log(sort_data)
+                break;
+        }
+
+        return sort_data;
+    }
+
     function updateChart4(data,color) {
         window.selected = d3.select("#select_list").property("value")
+        window.sort_selected = d3.select("#sort_list").property("value")
 
-        console.log("data(look at d.GeoName):")
+        console.log(sort_selected)
+
+        // console.log("data(look at d.GeoName):")
+        // console.log(data)
+
+        data = sortxaxis(data, sort_selected)
         console.log(data)
+
         x4.domain(data.map((d) => d.GeoName))
 
         yaxis4.call(d3.axisLeft(y4))
@@ -845,7 +886,7 @@
             .attr('r', (d) => sizeScale4(d.Electoral_Votes))
             .attr("fill", (d) => color(d.Industry));
 
-        //enter & update
+        //enter & update for Tooltip
         chart4.selectAll("circle.dot")
                     .on("mouseover", function(d) {
                         tooltip.transition()
@@ -904,14 +945,6 @@
             .attr("dy", "-.1em")
             .attr("transform", "rotate(-65)");
 
-        // Dem Avg
-        // var line = d3.chart.line()
-        //     .x(function (d) {
-        //     	return x(getDate(d.time));
-        // 	})
-        //     .y(function (d) {
-        //     	return y(d.count);
-        // 	});
         //gridlines
         grid.call(d3.axisTop()
                         .tickFormat("")
