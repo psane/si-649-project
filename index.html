@@ -638,12 +638,12 @@
                     .style("font-size", "24px")
                     .style("font-family","Raleway")
                     .style("font-weight", 700)
-                    .text("Chart title")
+                    .text("Chart title");
 
         window.xaxis4 = chart4.append("g")
                     .attr("transform", "translate(30," + (height4+20) + ")")
                     .style("font-family","Raleway")
-                    .style("font-size", "11px")
+                    .style("font-size", "11px");
 
         window.yaxis4 = chart4.append("g")
             .attr("transform", "translate(30,20)")
@@ -671,20 +671,20 @@
         // Adds grid lines
         window.grid = chart4.append("g")
                     .attr("class","dashed_grid")
-                    .attr("transform", "translate(30," + (height4+20) + ")")
+                    .attr("transform", "translate(30," + (height4+20) + ")");
 
         window.legend4 = d3.select(".chart4")
                 .append("g")
                 .attr("transform","translate(" + (chartWidth4 + margin.left + margin.right) + ",0)")
                 .selectAll("g")
-                .data(color.domain())
+                .data(color.domain());
 
         legend4.enter().append('circle')
         .attr("class", "legend")
             .attr('cx', 10)
             .attr('cy', 12)
             .attr('r', 10)
-            .attr("transform", (d,i) => "translate(0," + 30*i + ")")
+            .attr("transform", (d,i) => "translate(0," + 30*i + ")");
             // .style("fill",color)
 
         legend4.enter().append('text')
@@ -692,7 +692,7 @@
             .attr('y', 16)
             .attr("class", "legendText")
             .attr("transform",(d,i) => "translate(0," + 30*i + ")")
-            .text((d) => d )
+            .text((d) => d );
 
         legend4.enter().append('line')
             .attr("x1", 0)
@@ -803,7 +803,7 @@
                 }
             })
             .attr('r', (d) => sizeScale4(d.Electoral_Votes))
-            .attr("fill", (d) => color(d.Industry))
+            .attr("fill", (d) => color(d.Industry));
 
         //enter
         circle.enter().append("circle")
@@ -839,7 +839,7 @@
             .attr('r',0)
             .transition()
             .attr('r', (d) => sizeScale4(d.Electoral_Votes))
-            .attr("fill", (d) => color(d.Industry))
+            .attr("fill", (d) => color(d.Industry));
 
         //enter & update
         chart4.selectAll("circle.dot")
@@ -890,7 +890,7 @@
                         tooltip.append("tspan").attr("class","label").text("State: " + d.GeoName)
                         tooltip.append("tspan").attr("class","label").text("Industry: " + d.Industry)
                     })
-                    .on("mouseout", (d) => tooltip.transition().style("opacity", 0))
+                    .on("mouseout", (d) => tooltip.transition().style("opacity", 0));
 
         // x-axis
         xaxis4.call(d3.axisBottom(x4))
@@ -912,10 +912,10 @@
         grid.call(d3.axisTop()
                         .tickFormat("")
                         .tickSize(height4)
-                        .scale(x4))
+                        .scale(x4));
 
         //legend
-        d3.selectAll("circle.legend").style('fill', color)
+        d3.selectAll("circle.legend").style('fill', color);
     }
 
     function drawChart5(data,color) {
