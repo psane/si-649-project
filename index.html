@@ -133,6 +133,9 @@
                 <option value="alphabet">A-Z by State</option>
                 <option value="reverse">Z-A by State</option>
                 <option value="region">By Region</option>
+                <option value="industry">By Industry</option>
+                <option value="high-low">Belief %: High->Low</option>
+                <option value="low-high">Belief %: Low->High</option>
             </select>
         </div>
         <svg class="chart4 scale-down-80"></svg>
@@ -155,6 +158,9 @@
     var regions = {};
     var regions_arr = [];
 
+    var industry_dict = {};
+    var industry_arr = [];
+
 
     d3.json("assets/json/climate_data_long.json", function(error,data) {
         //console.log(data)
@@ -170,8 +176,8 @@
 
         // console.log(dem)
         // console.log(dem[0].happening)
-        // console.log(rep)
 
+        // Collects Average Belief by Party for the average lines
         for(var j = 0; j < 2; ++j) {
 	        var avg_happening = 0;
 	        var avg_human = 0;
@@ -227,16 +233,22 @@
 	    }
 
         for(var i = 0; i < 50; ++i){
+            // Creates dictionary: [region]state
             if(regions[dem[i].Region]) {
                 regions[dem[i].Region].push(dem[i].GeoName);
             }
             else {
                 regions[dem[i].Region] = [dem[i].GeoName];
             }
+            // Creates dictionary: [industry]state
+            if(industry_dict[dem[i].Industry]) {
+                industry_dict[dem[i].Industry].push(dem[i].GeoName);
+            }
+            else {
+                industry_dict[dem[i].Industry] = [dem[i].GeoName];
+            }
         }
-
-        // console.log("regions:")
-        // console.log(regions)
+        // console.log(industry_dict)
 
         // console.log(dem_belief_avgs)
         // console.log(rep_belief_avgs)
@@ -806,7 +818,7 @@
         updateChart4(data,color)
     }
 
-    function sortxaxis(sort_data, sort_option){
+    function sortxaxis(sort_data, sort_option, selected){
         console.log(sort_option);
 
         for(var key in regions){
@@ -816,6 +828,12 @@
                 regions_arr.push(regions[key][i])
             }
         }
+        for(var key in industry_dict){
+            for(var i = 0; i < industry_dict[key].length; ++i){
+                industry_arr.push(industry_dict[key][i])
+            }
+        }
+        // console.log(industry_arr)
 
         switch(sort_option) {
             case "alphabet":
@@ -834,10 +852,64 @@
                 sort_data.sort(function(a, b){
                    return regions_arr.indexOf(a.GeoName) - regions_arr.indexOf(b.GeoName)
                 })
-                // console.log("Region Region")
-                // console.log(sort_data)
+                break;
+            case "industry":
+                sort_data.sort(function(a, b){
+                   return industry_arr.indexOf(a.GeoName) - industry_arr.indexOf(b.GeoName)
+                })
+                break;
+            case "high-low":
+                sort_data.sort(function(x, y){
+                    switch(selected) {
+                        case "regulate":
+                            return d3.descending(x.regulate, y.regulate);
+                        case "supportRPS":
+                            return d3.descending(x.supportRPS, y.supportRPS);
+                        case "fundrenewables":
+                            return d3.descending(x.fundrenewables, y.fundrenewables);
+                        case "happening":
+                            return d3.descending(x.happening, y.happening);
+                        case "human":
+                            return d3.descending(x.human, y.human);
+                        case "consensus":
+                            return d3.descending(x.consensus, y.consensus);
+                        case "worried":
+                            return d3.descending(x.worried, y.worried);
+                        case "harmUS":
+                            return d3.descending(x.harmUS, y.harmUS);
+                        default:
+                            console.log("ERROR: high-low sort is taking in an invalid sort parameter");
+                            return sort_data;
+                    }
+                })
+                break;
+            case "low-high":
+                sort_data.sort(function(x, y){
+                    switch(selected) {
+                        case "regulate":
+                            return d3.ascending(x.regulate, y.regulate);
+                        case "supportRPS":
+                            return d3.ascending(x.supportRPS, y.supportRPS);
+                        case "fundrenewables":
+                            return d3.ascending(x.fundrenewables, y.fundrenewables);
+                        case "happening":
+                            return d3.ascending(x.happening, y.happening);
+                        case "human":
+                            return d3.ascending(x.human, y.human);
+                        case "consensus":
+                            return d3.ascending(x.consensus, y.consensus);
+                        case "worried":
+                            return d3.ascending(x.worried, y.worried);
+                        case "harmUS":
+                            return d3.ascending(x.harmUS, y.harmUS);
+                        default:
+                            console.log("ERROR: low-high sort is taking in an invalid sort parameter");
+                            return sort_data;
+                    }
+                })
                 break;
         }
+        // console.log(sort_data)
 
         return sort_data;
     }
@@ -848,9 +920,10 @@
         title.text(name);
         window.sort_selected = d3.select("#sort_list").property("value")
 
+        // console.log(data)
+        console.log(selected)
+        data = sortxaxis(data, sort_selected, selected)
 
-        data = sortxaxis(data, sort_selected)
-        console.log(data)
 
         x4.domain(data.map((d) => d.GeoName))
 
