@@ -130,7 +130,7 @@
         //console.log(data)
 
         window.nested_data = d3.nest().key((d)=>d.Group).entries(data)
-        
+
         dem = nested_data[0].values
         rep = nested_data[1].values
 
@@ -690,7 +690,7 @@
         //                 	.attr("y2", happening_mean)
         //                 	.attr("transform", "translate(30)")
         //                 	.style("stroke", "blue");
-                        	
+
 
 
 
@@ -826,7 +826,7 @@
             .attr("dx", "-.8em")
             .attr("dy", "-.1em")
             .attr("transform", "rotate(-65)");
-  
+
         // Dem Avg
         // var line = d3.chart.line()
         //     .x(function (d) {
@@ -868,13 +868,14 @@
             .style("font-weight", 500)
             .text("State-wise beliefs");
 
-        window.opinions = ["regulate","supportRPS", "happening", "human", "harmUS", "consensus", "fundrenewables", "worried"]
+        window.opinions = ["happening", "human", "harmUS", "regulate","supportRPS", "fundrenewables", "consensus", "worried"]
         window.barWidth5 = (chartwidth5-margin.left-margin.left)/opinions.length;
 
         // state names
         chart5.append("g")
             .attr("class","states")
-            .selectAll('rect.bar').data(data, (d) => d.key)
+            .selectAll('rect.bar')
+            .data(data, (d) => d.key)
             .enter().append("text")
             .attr("transform", (d, i) => "translate(" + (10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
             .attr("x", (chartwidth5-margin.left)/2)
@@ -912,6 +913,10 @@
     }
 
     function updateChart5(data,color) {
+        d3.selectAll(".barvalue")
+        .style("fill","none")
+
+        color.domain(["happening", "human", "harmUS", "regulate","supportRPS", "fundrenewables", "consensus", "worried"])
         x5.domain(opinions)
         xaxis5.call(d3.axisBottom(x5))
             .selectAll("text")
@@ -925,180 +930,184 @@
 
 
         //exit
-        bars.exit().remove()
+        d3.selectAll(".bar").remove()
 
         //update
 
         //enter
-        //regulate
+        //happening
         bars.enter().append("rect")
             .attr("transform", (d, i) => "translate(" + ((0*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
             .attr("class", "bar")
-            .attr("y", function(d) { return y5(d.regulate); })
-            .attr("height", function(d,i) { return (chartheight5) - y5(d.regulate); })
-            .attr("x", (d) => x5(d.key))
-            .attr("width", 0)
-            .transition(t)
-            .attr("width",barWidth5 - 1)
-            .attr("fill", color)
-
-        bars.enter().append("text")
-        .attr("class","barvalue")
-        .attr("transform", (d, i) => "translate(" + ((0*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-        .style("font-family","Raleway")
-        .style("font-size", "10px")
-        .style("font-weight", 600)
-        .style("fill", "black")
-        .text(function(d) { return d.regulate})
-        .attr("text-anchor", "middle")
-        .attr("x", barWidth5/2)
-        .attr("y", function(d) { return y5(d.regulate)-5; })
-
-
-
-        //supportRPS
-        bars.enter().append("rect")
-            .attr("transform", (d, i) => "translate(" + ((1*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-            .attr("class", "bar")
-            .attr("y", function(d) { return y5(d.supportRPS); })
-            .attr("height", function(d,i) { return chartheight5 - y5(d.supportRPS); })
-            .attr("x", (d) => x5(d.key))
-            .attr("width", 0)
-            .transition(t)
-            .attr("width",barWidth5 - 1)
-            .attr("fill", color)
-
-        bars.enter().append("text")
-        .attr("class","barvalue")
-        .attr("transform", (d, i) => "translate(" + ((1*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-        .style("font-family","Raleway")
-        .style("font-size", "10px")
-        .style("font-weight", 600)
-        .style("fill", "black")
-        .text(function(d) { return d.supportRPS})
-        .attr("text-anchor", "middle")
-        .attr("x", barWidth5/2)
-        .attr("y", function(d) { return y5(d.supportRPS)-5; })
-
-        //happening
-        bars.enter().append("rect")
-            .attr("transform", (d, i) => "translate(" + ((2*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-            .attr("class", "bar")
             .attr("y", function(d) { return y5(d.happening); })
-            .attr("height", function(d,i) { return chartheight5 - y5(d.happening); })
+            .attr("height", function(d) { return chartheight5 - y5(d.happening); })
             .attr("x", (d) => x5(d.key))
             .attr("width", 0)
             .transition(t)
-            .attr("width",barWidth5 - 1)
+            .attr("width",barWidth5 - 2)
             .attr("fill", color)
 
         bars.enter().append("text")
-        .attr("class","barvalue")
-        .attr("transform", (d, i) => "translate(" + ((2*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-        .style("font-family","Raleway")
-        .style("font-size", "10px")
-        .style("font-weight", 600)
-        .style("fill", "black")
-        .text(function(d) { return d.happening})
-        .attr("text-anchor", "middle")
-        .attr("x", barWidth5/2)
-        .attr("y", function(d) { return y5(d.happening)-5; })
+            .attr("class","barvalue")
+            .attr("transform", (d, i) => "translate(" + ((0*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .style("font-family","Raleway")
+            .style("font-size", "10px")
+            .style("font-weight", 600)
+            .style("fill", "black")
+            .text(function(d) { return d.happening})
+            .attr("text-anchor", "middle")
+            .attr("x", barWidth5/2)
+            .attr("y", function(d) { return y5(d.happening)-5; })
 
         //human
         bars.enter().append("rect")
-            .attr("transform", (d, i) => "translate(" + ((3*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .attr("transform", (d, i) => "translate(" + ((1*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
             .attr("class", "bar")
             .attr("y", function(d) { return y5(d.human); })
             .attr("height", function(d,i) { return chartheight5 - y5(d.human); })
             .attr("x", (d) => x5(d.key))
             .attr("width", 0)
             .transition(t)
-            .attr("width",barWidth5 - 1)
+            .attr("width",barWidth5 - 2)
             .attr("fill", color)
 
+
         bars.enter().append("text")
-        .attr("class","barvalue")
-        .attr("transform", (d, i) => "translate(" + ((3*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-        .style("font-family","Raleway")
-        .style("font-size", "10px")
-        .style("font-weight", 600)
-        .style("fill", "black")
-        .text(function(d) { return d.human})
-        .attr("text-anchor", "middle")
-        .attr("x", barWidth5/2)
-        .attr("y", function(d) { return y5(d.human)-5; })
+            .attr("class","barvalue")
+            .attr("transform", (d, i) => "translate(" + ((1*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .style("font-family","Raleway")
+            .style("font-size", "10px")
+            .style("font-weight", 600)
+            .style("fill", "black")
+            .text(function(d) { return d.human})
+            .attr("text-anchor", "middle")
+            .attr("x", barWidth5/2)
+            .attr("y", function(d) { return y5(d.human)-5; })
 
         //harmUS
         bars.enter().append("rect")
-            .attr("transform", (d, i) => "translate(" + ((4*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .attr("transform", (d, i) => "translate(" + ((2*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
             .attr("class", "bar")
             .attr("y", function(d) { return y5(d.harmUS); })
             .attr("height", function(d,i) { return chartheight5 - y5(d.harmUS); })
             .attr("x", (d) => x5(d.key))
             .attr("width", 0)
             .transition(t)
-            .attr("width",barWidth5 - 1)
+            .attr("width",barWidth5 - 2)
             .attr("fill", color)
 
-        bars.enter().append("text")
-        .attr("class","barvalue")
-        .attr("transform", (d, i) => "translate(" + ((4*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-        .style("font-family","Raleway")
-        .style("font-size", "10px")
-        .style("font-weight", 600)
-        .style("fill", "black")
-        .text(function(d) { return d.harmUS})
-        .attr("text-anchor", "middle")
-        .attr("x", barWidth5/2)
-        .attr("y", function(d) { return y5(d.harmUS)-5; })
 
-        //consensus
+        bars.enter().append("text")
+            .attr("class","barvalue")
+            .attr("transform", (d, i) => "translate(" + ((2*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .style("font-family","Raleway")
+            .style("font-size", "10px")
+            .style("font-weight", 600)
+            .style("fill", "black")
+            .text(function(d) { return d.harmUS})
+            .attr("text-anchor", "middle")
+            .attr("x", barWidth5/2)
+            .attr("y", function(d) { return y5(d.harmUS)-5; })
+
+        //regulate
         bars.enter().append("rect")
-            .attr("transform", (d, i) => "translate(" + ((5*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .attr("transform", (d, i) => "translate(" + ((3*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
             .attr("class", "bar")
-            .attr("y", function(d) { return y5(d.consensus); })
-            .attr("height", function(d,i) { return chartheight5 - y5(d.consensus); })
+            .attr("y", function(d) { return y5(d.regulate); })
+            .attr("height", function(d,i) { return (chartheight5) - y5(d.regulate); })
             .attr("x", (d) => x5(d.key))
             .attr("width", 0)
             .transition(t)
-            .attr("width",barWidth5 - 1)
+            .attr("width",barWidth5 - 2)
             .attr("fill", color)
 
+
         bars.enter().append("text")
-        .attr("class","barvalue")
-        .attr("transform", (d, i) => "translate(" + ((5*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-        .style("font-family","Raleway")
-        .style("font-size", "10px")
-        .style("font-weight", 600)
-        .style("fill", "black")
-        .text(function(d) { return d.consensus})
-        .attr("text-anchor", "middle")
-        .attr("x", barWidth5/2)
-        .attr("y", function(d) { return y5(d.consensus)-5; })
+            .attr("class","barvalue")
+            .attr("transform", (d, i) => "translate(" + ((3*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .style("font-family","Raleway")
+            .style("font-size", "10px")
+            .style("font-weight", 600)
+            .style("fill", "black")
+            .text(function(d) { return d.regulate})
+            .attr("text-anchor", "middle")
+            .attr("x", barWidth5/2)
+            .attr("y", function(d) { return y5(d.regulate)-5; })
+
+        //supportRPS
+        bars.enter().append("rect")
+            .attr("transform", (d, i) => "translate(" + ((4*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .attr("class", "bar")
+            .attr("y", function(d) { return y5(d.supportRPS); })
+            .attr("height", function(d,i) { return chartheight5 - y5(d.supportRPS); })
+            .attr("x", (d) => x5(d.key))
+            .attr("width", 0)
+            .transition(t)
+            .attr("width",barWidth5 - 2)
+            .attr("fill", color)
+
+
+        bars.enter().append("text")
+            .attr("class","barvalue")
+            .attr("transform", (d, i) => "translate(" + ((4*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .style("font-family","Raleway")
+            .style("font-size", "10px")
+            .style("font-weight", 600)
+            .style("fill", "black")
+            .text(function(d) { return d.supportRPS})
+            .attr("text-anchor", "middle")
+            .attr("x", barWidth5/2)
+            .attr("y", function(d) { return y5(d.supportRPS)-5; })
 
         //fundrenewables
         bars.enter().append("rect")
-            .attr("transform", (d, i) => "translate(" + ((6*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .attr("transform", (d, i) => "translate(" + ((5*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
             .attr("class", "bar")
             .attr("y", function(d) { return y5(d.fundrenewables); })
             .attr("height", function(d,i) { return chartheight5 - y5(d.fundrenewables); })
             .attr("x", (d) => x5(d.key))
             .attr("width", 0)
             .transition(t)
-            .attr("width",barWidth5 - 1)
+            .attr("width",barWidth5 - 2)
             .attr("fill", color)
 
+
         bars.enter().append("text")
-        .attr("class","barvalue")
-        .attr("transform", (d, i) => "translate(" + ((6*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-        .style("font-family","Raleway")
-        .style("font-size", "10px")
-        .style("font-weight", 600)
-        .style("fill", "black")
-        .text(function(d) { return d.fundrenewables})
-        .attr("text-anchor", "middle")
-        .attr("x", barWidth5/2)
-        .attr("y", function(d) { return y5(d.fundrenewables)-5; })
+            .attr("class","barvalue")
+            .attr("transform", (d, i) => "translate(" + ((5*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .style("font-family","Raleway")
+            .style("font-size", "10px")
+            .style("font-weight", 600)
+            .style("fill", "black")
+            .text(function(d) { return d.fundrenewables})
+            .attr("text-anchor", "middle")
+            .attr("x", barWidth5/2)
+            .attr("y", function(d) { return y5(d.fundrenewables)-5; })
+
+        //consensus
+        bars.enter().append("rect")
+            .attr("transform", (d, i) => "translate(" + ((6*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .attr("class", "bar")
+            .attr("y", function(d) { return y5(d.consensus); })
+            .attr("height", function(d,i) { return chartheight5 - y5(d.consensus); })
+            .attr("x", (d) => x5(d.key))
+            .attr("width", 0)
+            .transition(t)
+            .attr("width",barWidth5 - 2)
+            .attr("fill", color)
+
+
+        bars.enter().append("text")
+            .attr("class","barvalue")
+            .attr("transform", (d, i) => "translate(" + ((6*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .style("font-family","Raleway")
+            .style("font-size", "10px")
+            .style("font-weight", 600)
+            .style("fill", "black")
+            .text(function(d) { return d.consensus})
+            .attr("text-anchor", "middle")
+            .attr("x", barWidth5/2)
+            .attr("y", function(d) { return y5(d.consensus)-5; })
 
         //worried
         bars.enter().append("rect")
@@ -1109,20 +1118,21 @@
             .attr("x", (d) => x5(d.key))
             .attr("width", 0)
             .transition(t)
-            .attr("width",barWidth5 - 1)
+            .attr("width",barWidth5 - 2)
             .attr("fill", color)
 
+
         bars.enter().append("text")
-        .attr("class","barvalue")
-        .attr("transform", (d, i) => "translate(" + ((7*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
-        .style("font-family","Raleway")
-        .style("font-size", "10px")
-        .style("font-weight", 600)
-        .style("fill", "black")
-        .text(function(d) { return d.worried})
-        .attr("text-anchor", "middle")
-        .attr("x", barWidth5/2)
-        .attr("y", function(d) { return y5(d.worried)-5; })
+            .attr("class","barvalue")
+            .attr("transform", (d, i) => "translate(" + ((7*barWidth5)+10+margin.left+((i%4)*chartwidth5)) + "," + (margin.top+((Math.floor(i/4))*(chartheight5+margin.top+50))) + ")")
+            .style("font-family","Raleway")
+            .style("font-size", "10px")
+            .style("font-weight", 600)
+            .style("fill", "black")
+            .text(function(d) { return d.worried})
+            .attr("text-anchor", "middle")
+            .attr("x", barWidth5/2)
+            .attr("y", function(d) { return y5(d.worried)-5; })
 
 
 
