@@ -745,7 +745,8 @@
     function updateChart4(data,color) {
         window.selected = d3.select("#select_list").property("value")
 
-
+        console.log("data(look at d.GeoName):")
+        console.log(data)
         x4.domain(data.map((d) => d.GeoName))
 
         yaxis4.call(d3.axisLeft(y4))
@@ -933,7 +934,7 @@
         window.chart5 = d3.select(".chart5")
                     .attr("width", width5)
                     .attr("height", height5 + margin.top + margin.bottom)
-                    .append("g")
+                    .append("g");
 
         chart5.append("text")
             .attr("x", width5/2)
