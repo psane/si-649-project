@@ -271,8 +271,6 @@
     </section>
 
     <script>
-
-
     var margin = {top: 50 , right: 50, bottom: 100, left: 20}
     var t = d3.transition().duration(2000)
     var tooltip = d3.select(".tooltip")
@@ -839,14 +837,14 @@
                     // .attr("transform", "translate(20,0)")
 
         chart4.append("text")
-                .attr("transform", "translate(" + (chartWidth4/2) + " ," + (height4 + margin.top + 50) + ")")
+                .attr("transform", "translate(" + ((chartWidth4/2)) + " ," + (height4 + margin.top + 70) + ")")
                 .style("text-anchor", "middle")
                 .text("States");
 
         chart4.append("text")
         .attr("transform", "rotate(-90)")
-        .attr("y", -15)
-        .attr("x",0 - (height4 / 2))
+        .attr("y", 0)
+        .attr("x",0 - (height4 / 2) - 40)
         .attr("dy", "1em")
         .style("text-anchor", "middle")
         .text("Percentage Beliefs");
@@ -854,7 +852,7 @@
         window.title = chart4.append("g")
                     .append("text")
                     .attr("x", (chartWidth4/2))
-                    .attr("y", margin.top/2)
+                    .attr("y", (margin.top/2))
                     .attr("text-anchor", "middle")
                     .attr("class","chartTitle")
                     .style("font-size", "24px")
@@ -863,45 +861,45 @@
                     .text("Chart title");
 
         window.xaxis4 = chart4.append("g")
-                    .attr("transform", "translate(30," + (height4+20) + ")")
+                    .attr("transform", "translate(50," + (height4+40) + ")")
                     .style("font-family","Raleway")
                     .style("font-size", "11px");
 
         window.yaxis4 = chart4.append("g")
-            .attr("transform", "translate(30,20)")
+            .attr("transform", "translate(50,40)")
             .style("font-family","Raleway")
             .style("font-size", "11px");
 
         // Adds starting belief variable(happening) average for Dem
         window.dem_avg = chart4.append("g")
                                 .attr("id", "dem_avg")
-                                .attr("transform", "translate(30, 20)")
+                                .attr("transform", "translate(50, 40)")
                                 .append("line")
                                     .style("stroke", "blue")
-                                    .style("stroke-width", 3);
+                                    .style("stroke-width", 2);
 
         // Adds happening average belief line for republicans
         window.rep_avg = chart4.append("g")
                                 .attr("id", "rep_avg")
-                                .attr("transform", "translate(30, 20)")
+                                .attr("transform", "translate(50, 40)")
                                 .append("line")
                                     .style("stroke", "red")
-                                    .style("stroke-width", 3);
+                                    .style("stroke-width", 2);
 
         // Add grid lines
         window.grid = chart4.append("g")
                     .attr("class","dashed_grid")
-                    .attr("transform", "translate(30," + (height4+20) + ")");
+                    .attr("transform", "translate(50," + (height4+40) + ")");
 
         // add LEGEND below
         window.legend4 = d3.select(".chart4")
                 .append("g")
-                .attr("transform","translate(" + (chartWidth4 + margin.left + margin.right) + ",0)")
+                .attr("transform","translate(" + (20+chartWidth4 + margin.left + margin.right) + ",0)")
                 .selectAll("g")
                 .data(color.domain());
 
         legend4.enter().append('circle')
-        .attr("class", "legend")
+            .attr("class", "legend")
             .attr('cx', 10)
             .attr('cy', 12)
             .attr('r', 10)
@@ -918,30 +916,30 @@
         legend4.enter().append('line')
             .attr("x1", 0)
             .attr("x2", 20)
-            .attr("y1", 130)
-            .attr("y2", 130)
+            .attr("y1", 140)
+            .attr("y2", 140)
             .style("stroke", "blue")
-            .style("stroke-width", 3);
+            .style("stroke-width", 2);
 
         legend4.enter().append('text')
             .attr('x', 25)
-            .attr('y', 133)
+            .attr('y', 143)
             .attr("class", "legendText")
-            .text("Dem. Belief Avg");
+            .text("Democratic Avg");
 
         legend4.enter().append('line')
             .attr("x1", 0)
             .attr("x2", 20)
-            .attr("y1", 150)
-            .attr("y2", 150)
+            .attr("y1", 160)
+            .attr("y2", 160)
             .style("stroke", "red")
-            .style("stroke-width", 3);
+            .style("stroke-width", 2);
 
         legend4.enter().append('text')
             .attr('x', 25)
-            .attr('y', 155)
+            .attr('y', 165)
             .attr("class", "legendText")
-            .text("Repub. Belief Avg");
+            .text("Republican Avg");
 
         // Update the chart
         updateChart4(data,color)
@@ -1128,7 +1126,7 @@
         //enter
         circle.enter().append("circle")
             .attr("class","dot")
-            .attr("transform", "translate(40,20)")
+            .attr("transform", "translate(60,40)")
             .attr('cx', (d) =>  x4(d.GeoName))
             .attr('cy', function(d) {
                 if (selected == 'regulate') {
