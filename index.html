@@ -139,6 +139,134 @@
             </select>
         </div>
         <svg class="chart4 scale-down-80"></svg>
+
+        <div class="row" id="region_key" style="display: none">
+            <h1>U.S. Census Bureau Regions</h1>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th scope="col">South</th>
+                        <th scope="col">West</th>
+                        <th scope="col">Northeast</th>
+                        <th scope="col">Midwest</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 0 -->
+                    <tr>
+                        <td>Alabama</td>
+                        <td>Alaska</td>
+                        <td>Connecticut</td>
+                        <td>Illinios</td>
+                    </tr>
+                    <!-- 1 -->
+                    <tr>
+                        <td>Arkansas</td>
+                        <td>Arizona</td>
+                        <td>Maine</td>
+                        <td>Indiana</td>
+                    </tr>
+                    <!-- 2 -->
+                    <tr>
+                        <td>Delaware</td>
+                        <td>California</td>
+                        <td>Massachusetts</td>
+                        <td>Iowa</td>
+                    </tr>
+                    <!-- 3 -->
+                    <tr>
+                        <td>Florida</td>
+                        <td>Colorado</td>
+                        <td>New Hampshire</td>
+                        <td>Kansas</td>
+                    </tr>
+                    <!-- 4 -->
+                    <tr>
+                        <td>Georgia</td>
+                        <td>Hawaii</td>
+                        <td>New Jersey</td>
+                        <td>Michigan</td>
+                    </tr>
+                    <!-- 5 -->
+                    <tr>
+                        <td>Kentucky</td>
+                        <td>Idaho</td>
+                        <td>New York</td>
+                        <td>Minnesota</td>
+                    </tr>
+                    <!-- 6 -->
+                    <tr>
+                        <td>Lousiana</td>
+                        <td>Montana</td>
+                        <td>Pennsylvania</td>
+                        <td>Missouri</td>
+                    </tr>
+                    <!-- 7 -->
+                    <tr>
+                        <td>Maryland</td>
+                        <td>Nevada</td>
+                        <td>Rhode Island</td>
+                        <td>Nebraska</td>
+                    </tr>
+                    <!-- 8 -->
+                    <tr>
+                        <td>Mississippi</td>
+                        <td>New Mexico</td>
+                        <td>Vermont</td>
+                        <td>North Dakota</td>
+                    </tr>
+                    <!-- 9 -->
+                    <tr>
+                        <td>North Carolina</td>
+                        <td>Oregon</td>
+                        <td></td>
+                        <td>Ohio</td>
+                    </tr>
+                    <!-- 10 -->
+                    <tr>
+                        <td>Oklahoma</td>
+                        <td>Utah</td>
+                        <td></td>
+                        <td>South Dakota</td>
+                    </tr>
+                    <!-- 11 -->
+                    <tr>
+                        <td>South Carolina</td>
+                        <td>Washington</td>
+                        <td></td>
+                        <td>Wisconson</td>
+                    </tr>
+                    <!-- 12 -->
+                    <tr>
+                        <td>Tennessee</td>
+                        <td>Wyoming</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- 13 -->
+                    <tr>
+                        <td>Texas</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- 14 -->
+                    <tr>
+                        <td>Virginia</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- 15 -->
+                    <tr>
+                        <td>West Virginia</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <svg class="chart5"></svg>
     </section>
 
@@ -248,6 +376,7 @@
                 industry_dict[dem[i].Industry] = [dem[i].GeoName];
             }
         }
+
         // console.log(industry_dict)
 
         // console.log(dem_belief_avgs)
@@ -821,6 +950,13 @@
     function sortxaxis(sort_data, sort_option, selected){
         console.log(sort_option);
 
+        if(sort_option == "region"){
+            $("#region_key").show();
+        }
+        else {
+            $("#region_key").hide();
+        }
+
         for(var key in regions){
             // console.log(key)
             // console.log(regions[key].length)
@@ -828,6 +964,8 @@
                 regions_arr.push(regions[key][i])
             }
         }
+        // console.log(regions)
+        // console.log(regions_arr)
         for(var key in industry_dict){
             for(var i = 0; i < industry_dict[key].length; ++i){
                 industry_arr.push(industry_dict[key][i])
