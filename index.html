@@ -99,7 +99,7 @@
         <!-- onclick="drawChart4()" -->
         <a href="#s-4" id="s3-next-btn" class="btn-next" >next</a>
     </section>
-
+    <!-- <hr style=""> -->
     <section id="s-4">
         <div class="row">
             <div class="col-sm-12">
@@ -131,7 +131,6 @@
             <p class="textlabel">Choose how to sort the graph:</p>
             <select id="sort_list" onchange="checkactive()">
                 <option value="alphabet">A-Z by State</option>
-                <option value="reverse">Z-A by State</option>
                 <option value="region">By Region</option>
                 <option value="industry">By Industry</option>
                 <option value="high-low">Belief %: High->Low</option>
@@ -979,11 +978,11 @@
                 // console.log("Alphabet Alphabet");
                 // console.log(sort_data)
                 break;
-            case "reverse":
-                sort_data.sort(function(x, y){
-                   return d3.descending(x.GeoName, y.GeoName);
-                })
-                break;
+            // case "reverse":
+            //     sort_data.sort(function(x, y){
+            //        return d3.descending(x.GeoName, y.GeoName);
+            //     })
+            //     break;
             case "region":
                 sort_data.sort(function(a, b){
                    return regions_arr.indexOf(a.GeoName) - regions_arr.indexOf(b.GeoName)
