@@ -255,3 +255,40 @@ h3 {
     text-align: left;
     padding-left: 150px;
 }
+#region_key {
+    padding: 0;
+    width: auto;
+    transform: translateX(160px);
+    opacity: 1;
+    -moz-transition: all ease-in-out 0.26s;
+    -o-transition: all ease-in-out 0.26s;
+    -webkit-transition: all ease-in-out 0.26s;
+    transition: all ease-in-out 0.26s;
+}
+#region_key.hidden {
+    opacity: 0;
+}
+#region_key li{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    border-bottom: 1px solid #4d4d4d;
+    border-left: 1px solid #4d4d4d;
+    border-right: 1px solid #4d4d4d;
+}
+#region_key li:nth-child(1){
+    /*background-color: red;*/
+    width: 25%;
+}
+#region_key li:nth-child(2){
+    /*background-color: blue;*/
+    width: 21%;
+}
+#region_key li:nth-child(3){
+    /*background-color: green;*/
+    width: 16%;
+}
+#region_key li:nth-child(4){
+    /*background-color: yellow;*/
+    width: 20%;
+}

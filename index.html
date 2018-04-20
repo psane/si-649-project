@@ -138,9 +138,29 @@
                 <option value="low-high">Belief %: Low->High</option>
             </select>
         </div>
-        <svg class="chart4 scale-down-80"></svg>
+        <div id="chart-container" class="container-fluid" >
+            <div class="row">
+                <svg class="chart4 scale-down-80"></svg>
+                <ul id="region_key" class="hidden">
+                    <li class="region-box">
+                        <div class="region-label">South</div>
+                    </li>
+                    <li class="region-box">
+                        <div class="region-label">West</div>
+                    </li>
+                    <li class="region-box">
+                        <div class="region-label">Northeast</div>
+                    </li>
+                    <li class="region-box">
+                        <div class="region-label">Midwest</div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        
 
-        <div class="row" id="region_key" style="display: none">
+        <div class="row"  style="display: none">
             <h1>U.S. Census Bureau Regions</h1>
             <table class="table table-sm">
                 <thead>
@@ -951,10 +971,10 @@
         console.log(sort_option);
 
         if(sort_option == "region"){
-            $("#region_key").show();
+            $("#region_key").removeClass("hidden");
         }
         else {
-            $("#region_key").hide();
+            $("#region_key").addClass("hidden");
         }
 
         for(var key in regions){
@@ -1580,6 +1600,16 @@
             scrollTop: $("#s-4").offset().top
         }, 500);
     });
+
+    $(document).ready(function() {
+        let region_labels = $("#region_key");
+        let master_chart = $(".chart4");
+        // let master_chart_width = master_chart.attr("width");
+        let master_chart_width = master_chart.width();
+        region_labels.width(master_chart_width*0.8);
+        console.log("master_chart_width: "+master_chart_width);
+    });
+    
 
 </script>
 
